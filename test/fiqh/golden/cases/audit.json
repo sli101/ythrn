@@ -1,0 +1,27 @@
+[
+  {
+    "id": "G-AUDIT-001",
+    "group": "audit",
+    "title": "انقطع الدم ليلًا في رمضان → تنبيه الغسل أو التيمم قبل الفجر",
+    "source": "H9-15 (المنتخبة م٥٠٣؛ بانوان 5475)؛ 10-audit §٨ بند ١",
+    "rules": ["H9-15"],
+    "subject": "HAYD",
+    "profile": {"womanType": "VW", "habit": {"anchor": "start", "start": 1, "count": 6}},
+    "timeline": [{"days": "1-6", "blood": true}, {"at": "D6 23:00", "event": "bloodStop"}, {"at": "D6 23:30", "event": "kursufClean"}],
+    "answers": {"ramadanTomorrow": true, "willReturnBeforeTen": false},
+    "expected": [{"assert": "alertGhuslBeforeFajr", "at": "D7 fajr"}, {"days": "7", "state": "TAHIR"}],
+    "notes": "السجل H9-15 مضاف من التدقيق وبانتظار إقرار المالك؛ الحالة معلَّقة عليه."
+  },
+  {
+    "id": "G-AUDIT-002",
+    "group": "audit",
+    "title": "انقطع الدم ليلًا في غير رمضان → لا تنبيه صوم",
+    "source": "H9-15 (دون غيرهما)",
+    "rules": ["H9-15"],
+    "subject": "HAYD",
+    "profile": {"womanType": "VW", "habit": {"anchor": "start", "start": 1, "count": 6}},
+    "timeline": [{"days": "1-6", "blood": true}, {"at": "D6 23:00", "event": "bloodStop"}, {"at": "D6 23:30", "event": "kursufClean"}],
+    "answers": {"ramadanTomorrow": false, "willReturnBeforeTen": false},
+    "expected": [{"assert": "alertGhuslBeforeFajr", "value": false}, {"days": "7", "state": "TAHIR"}]
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "G-IST-001",
+    "group": "istihadha",
+    "title": "دم يومان ثم انقطاع مع اختبار قطنة: قليلة",
+    "source": "I1-04 (م٢٣٧)؛ I3-01 (س ١٩٧٦)",
+    "rules": ["I1-04", "I3-01", "H3-01"],
+    "subject": "ISTIHADHA",
+    "profile": {"womanType": "MUD"},
+    "timeline": [{"days": "1-2", "blood": true, "props": "faqid"}, {"at": "D1 06:00", "event": "istihadhaTest", "level": "qalila"}, {"days": "3-12", "blood": false}],
+    "expected": [{"days": "1-2", "state": "IST_Q"}, {"days": "3-12", "state": "TAHIR"}]
+  },
+  {
+    "id": "G-IST-002",
+    "group": "istihadha",
+    "title": "استحاضة بلا اختبار → القسم غير معيَّن والسؤال التالي الاختبار",
+    "source": "I2-01 (م٢٣٨)",
+    "rules": ["I2-01"],
+    "subject": "ISTIHADHA",
+    "profile": {"womanType": "MUD"},
+    "timeline": [{"days": "1-2", "blood": true, "props": "faqid"}, {"days": "3-12", "blood": false}],
+    "expected": [{"days": "1-2", "state": "IST_U"}, {"assert": "pendingInput", "value": "istihadhaTest"}]
+  },
+  {
+    "id": "G-IST-003",
+    "group": "istihadha",
+    "title": "تبدّل القسم: قليلة في الأول ثم كثيرة في الثاني",
+    "source": "I1-04؛ I2-07 (م٢٤٨)",
+    "rules": ["I1-04", "I2-07"],
+    "subject": "ISTIHADHA",
+    "profile": {"womanType": "MUD"},
+    "timeline": [{"days": "1-2", "blood": true, "props": "faqid"}, {"at": "D1 06:00", "event": "istihadhaTest", "level": "qalila"}, {"at": "D2 06:00", "event": "istihadhaTest", "level": "kathira", "flow": "continuous"}, {"days": "3-12", "blood": false}],
+    "expected": [{"days": "1", "state": "IST_Q"}, {"days": "2", "state": "IST_K"}]
+  },
+  {
+    "id": "G-IST-004",
+    "group": "istihadha",
+    "title": "بعد التجاوز لذات الوقتية والعددية: الزائد استحاضة متوسطة بالاختبار",
+    "source": "H7-01a؛ I1-04؛ I2-03",
+    "rules": ["H7-01a", "I1-04", "I2-03"],
+    "subject": "HAYD",
+    "profile": {"womanType": "VW", "habit": {"anchor": "start", "start": 1, "count": 5}},
+    "timeline": [{"days": "1-12", "blood": true}, {"at": "D6 06:00", "event": "istihadhaTest", "level": "mutawassita"}],
+    "expected": [{"days": "1-5", "state": "HAYD"}, {"days": "6-12", "state": "IST_M"}]
+  },
+  {
+    "id": "G-IST-005",
+    "group": "istihadha",
+    "title": "بعد النفاس بعدد سبعة: الزائد استحاضة كثيرة بالاختبار",
+    "source": "N2-01؛ I1-04؛ I2-04",
+    "rules": ["N2-01", "I1-04", "I2-04"],
+    "subject": "NIFAS",
+    "profile": {"womanType": "W", "habit": {"count": 7}},
+    "timeline": [{"at": "D1 fajr", "event": "birth"}, {"days": "1-12", "blood": true}, {"at": "D8 06:00", "event": "istihadhaTest", "level": "kathira"}],
+    "expected": [{"days": "1-7", "state": "NIFAS"}, {"days": "8-12", "state": "IST_K"}]
+  },
+  {
+    "id": "G-IST-006",
+    "group": "istihadha",
+    "title": "اختبار من استحاضة سابقة لا يسري على استحاضة جديدة بعد حيض",
+    "source": "I2-01 (الاختبار قبل الصلاة لكل حال)",
+    "rules": ["I2-01", "I1-04"],
+    "subject": "HAYD",
+    "profile": {"womanType": "VW", "habit": {"anchor": "start", "start": 10, "count": 5}},
+    "timeline": [{"days": "1-2", "blood": true, "props": "faqid"}, {"at": "D1 06:00", "event": "istihadhaTest", "level": "kathira"}, {"days": "3-9", "blood": false}, {"days": "10-14", "blood": true}, {"days": "15-24", "blood": false}, {"days": "25-26", "blood": true, "props": "faqid"}, {"days": "27-30", "blood": false}],
+    "expected": [{"days": "1-2", "state": "IST_K"}, {"days": "10-14", "state": "HAYD"}, {"days": "25-26", "state": "IST_U"}]
+  }
+]

@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ythrn/rules.schema.json",
+  "title": "ملف قواعد «يطهرن» — المرحلة ١ (بيانات فقهية بلا ربط معالِج)",
+  "type": "object",
+  "required": ["version", "generated", "marja", "sources", "rules"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "type": "string" },
+    "generated": { "type": "string" },
+    "marja": { "const": "sistani" },
+    "sources": {
+      "type": "object",
+      "description": "فهرس المصادر؛ المفتاح هو الرمز المستعمل في rules[].sources[].src",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["title", "marja"],
+        "properties": {
+          "title": { "type": "string" },
+          "marja": { "enum": ["sistani", "zanjani", "wahid"] },
+          "edition": { "type": "string" },
+          "urlPattern": { "type": "string" },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "rules": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/rule" }
+    }
+  },
+  "$defs": {
+    "classification": {
+      "enum": ["fatwa", "ihtiyat_wujubi", "ishkal", "ihtiyat_istihbabi", "unspecified"]
+    },
+    "womanType": { "enum": ["VW", "V", "W", "MUB", "MUD", "NAS_T", "NAS_C", "NAS_B", "ANY"] },
+    "sourceRef": {
+      "type": "object",
+      "required": ["src"],
+      "additionalProperties": false,
+      "properties": {
+        "src": { "type": "string" },
+        "issue": { "type": "string", "description": "رقم المسألة أو الاستفتاء أو العنوان، نصًّا كما في الاستخراج" },
+        "page": { "type": "string" },
+        "footnote": { "type": "string" },
+        "url": { "type": "string" },
+        "quote": { "type": "string", "description": "نص حرفي قصير إن اختلف عن text" }
+      }
+    },
+    "alternative": {
+      "type": "object",
+      "required": ["marja", "ruling", "classification", "exit"],
+      "additionalProperties": false,
+      "properties": {
+        "marja": { "enum": ["zanjani", "wahid"] },
+        "ruling": { "type": "string" },
+        "classification": { "$ref": "#/$defs/classification" },
+        "sources": { "type": "array", "items": { "$ref": "#/$defs/sourceRef" } },
+        "exit": { "enum": [true, false, null], "description": "true = مخرج من احتياط السيستاني؛ false = لا مخرج؛ null = لم يُقرأ ⚠️" },
+        "note": { "type": "string" }
+      }
+    },
+    "unknownPolicy": {
+      "type": "object",
+      "required": ["input", "dontUnderstand", "dontRemember"],
+      "additionalProperties": false,
+      "properties": {
+        "input": { "type": "string" },
+        "dontUnderstand": { "type": "string" },
+        "dontRemember": { "type": "string" }
+      }
+    },
+    "rule": {
+      "type": "object",
+      "required": ["id", "unit", "title", "kind", "text", "classification", "sources", "applies", "effect", "alternatives", "unknownPolicy", "ihtiyatRegistryNo", "flags", "verified", "logic"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^(H[0-9]|I[0-9]?|N[0-9]?|M|C|T)-[0-9]{2}[a-z]?$" },
+        "unit": { "type": "string", "pattern": "^(H[0-9]|I[0-9]?|N[0-9]?|M|C|T)$" },
+        "title": { "type": "string" },
+        "kind": { "enum": ["rule", "definition", "input", "info"] },
+        "question": { "type": "string" },
+        "text": { "type": "string", "description": "النص الحرفي للسيستاني كما في الاستخراج؛ عند تعدد النصوص تُفصل بسطر فارغ" },
+        "classification": { "$ref": "#/$defs/classification" },
+        "sources": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/sourceRef" } },
+        "applies": {
+          "type": "object",
+          "required": ["subject", "womanTypes", "phase"],
+          "additionalProperties": false,
+          "properties": {
+            "subject": { "enum": ["HAYD", "ISTIHADHA", "NIFAS", "SIQT", "GENERAL"] },
+            "womanTypes": { "type": "array", "items": { "$ref": "#/$defs/womanType" } },
+            "phase": { "enum": ["eligibility", "onset", "during", "cutoff", "overflow", "twoBloods", "post", "duties", "time", "general"] }
+          }
+        },
+        "effect": { "type": "string", "description": "قاعدة التطبيق كما في الاستخراج (بالعربية، قابلة للمراجعة)" },
+        "alternatives": { "type": "array", "items": { "$ref": "#/$defs/alternative" } },
+        "unknownPolicy": { "type": "array", "items": { "$ref": "#/$defs/unknownPolicy" } },
+        "ihtiyatRegistryNo": { "type": ["integer", "null"] },
+        "flags": { "type": "array", "items": { "type": "string" } },
+        "verified": { "type": "boolean" },
+        "notes": { "type": "string" },
+        "logic": { "type": "null", "description": "يُملأ في المرحلة ٢ بربط المعالِج" }
+      }
+    }
+  }
+}

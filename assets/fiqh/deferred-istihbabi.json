@@ -1,0 +1,369 @@
+{
+  "note": "احتياطات استحبابية مؤجَّلة بقرار المالك ٢٠٢٦/١٠/٠١؛ ليست في rules.json ولا يقرؤها المحرك",
+  "rules": [
+    {
+      "id": "H7-04c",
+      "unit": "H7",
+      "title": "المبتدئة والمضطربة — اختيار السبع عند التخيير",
+      "kind": "rule",
+      "text": "«وإذا لم يمكن الاقتداء ببعض نسائها كانت مخيّرة في كلّ شهر في التحيّض فيما بين الثلاثة إلى العشرة، ولكن ليس لها أن تختار عدداً تطمئنّ بأنّه لا يناسبها، والأحوط استحباباً اختيار السبع إذا لم يكن غير مناسب لها».",
+      "classification": "ihtiyat_istihbabi",
+      "sources": [
+        {
+          "src": "MNHJ",
+          "issue": "222",
+          "url": "https://www.sistani.org/arabic/book/23720/4589/"
+        },
+        {
+          "src": "JAMI",
+          "issue": "585",
+          "url": "https://www.sistani.org/persian/book/26575/5931/"
+        }
+      ],
+      "applies": {
+        "subject": "HAYD",
+        "womanTypes": [
+          "MUB",
+          "MUD"
+        ],
+        "phase": "overflow"
+      },
+      "effect": "عند تعذر الأقارب: المختار ٣–١٠ (افتراضي ٧ إن ناسبها)؛ لا تختار عددًا تطمئن بأنه لا يناسبها.",
+      "alternatives": [
+        {
+          "marja": "zanjani",
+          "ruling": "ز «٥٠٢» ص٩٧: عند تعذر الأقارب تتحيّض بستّة أو بسبعة أيّام.",
+          "classification": "fatwa",
+          "sources": [
+            {
+              "src": "ZANJ_R",
+              "issue": "٥٠٢",
+              "page": "٩٧"
+            }
+          ],
+          "exit": false,
+          "note": "بديل مختلف (٦ أو ٧ بدل التخيير ٣–١٠)؛ ليس مورد رجوع لأن الاحتياط استحبابي."
+        },
+        {
+          "marja": "wahid",
+          "ruling": "هـ١٥٧/هـ١٥٨: الست أو السبع مع احتياط بالجمع.",
+          "classification": "unspecified",
+          "sources": [
+            {
+              "src": "WAHD_M",
+              "issue": "222",
+              "footnote": "157"
+            },
+            {
+              "src": "WAHD_M",
+              "issue": "222",
+              "footnote": "158"
+            }
+          ],
+          "exit": false,
+          "note": "بديل مختلف."
+        }
+      ],
+      "unknownPolicy": [
+        {
+          "input": "العدد المختار (٣–١٠)",
+          "dontUnderstand": "كم يومًا تريدين أن تُحسبي حائضًا هذا الشهر: بين ثلاثة أيام وعشرة؟",
+          "dontRemember": "الافتراضي السبع إذا لم يكن غير مناسب لها (احتياط استحبابي، م٢٢٢)."
+        }
+      ],
+      "ihtiyatRegistryNo": null,
+      "flags": [],
+      "verified": true,
+      "notes": "جزء من السجل H7-04؛ مذكور في قائمة الاحتياطات الاستحبابية في 09-final §١ (H7-04: اختيار السبع) بلا رقم سطر.",
+      "logic": null
+    },
+    {
+      "id": "H7-05b",
+      "unit": "H7",
+      "title": "الناسية — الاحتياط الاستحبابي بالجمع في الزائد المحتمل وفي جميع الأيام مع العلم بالمصادفة",
+      "kind": "rule",
+      "text": "م٢٢٣: ومع احتمال العادة فيما زاد على المفروض «فالأحوط الأولى» الجمع.\n\nم٢٢٤: «والأحوط الأولى لها أن تحتاط في جميع أيّام الدم مع العلم بالمصادفة مع وقتها إجمالاً».",
+      "classification": "ihtiyat_istihbabi",
+      "sources": [
+        {
+          "src": "MNHJ",
+          "issue": "223",
+          "url": "https://www.sistani.org/arabic/book/23720/4589/"
+        },
+        {
+          "src": "MNHJ",
+          "issue": "224",
+          "url": "https://www.sistani.org/arabic/book/23720/4589/"
+        },
+        {
+          "src": "JAMI",
+          "issue": "594"
+        }
+      ],
+      "applies": {
+        "subject": "HAYD",
+        "womanTypes": [
+          "NAS_C",
+          "NAS_T",
+          "NAS_B"
+        ],
+        "phase": "overflow"
+      },
+      "effect": "عرض خيار احتياط استحبابي: الجمع في الأيام الزائدة المحتملة من العدد المنسي (ناسية العدد)؛ والجمع في جميع أيام الدم عند العلم الإجمالي بمصادفة الوقت (ناسية الوقت).",
+      "alternatives": [
+        {
+          "marja": "wahid",
+          "ruling": "م٢٢٤ هـ١٦٠–١٦١: العلم بالمصادفة أو احتماله → الاحتياط في جميع الأيام؛ هـ١٥٩: العدد المحتمل غير ٦ أو ٧ → الأحوط الجمع بينه وبين الست أو السبع.",
+          "classification": "unspecified",
+          "sources": [
+            {
+              "src": "WAHD_M",
+              "issue": "223",
+              "footnote": "159"
+            },
+            {
+              "src": "WAHD_M",
+              "issue": "224",
+              "footnote": "160–161"
+            }
+          ],
+          "exit": false,
+          "note": "أشد (يحتاط حيث يستحب السيستاني)."
+        }
+      ],
+      "unknownPolicy": [],
+      "ihtiyatRegistryNo": null,
+      "flags": [],
+      "verified": true,
+      "notes": "جزء من السجل H7-05؛ مذكور في قائمة الاحتياطات الاستحبابية في 09-final §١ (H7-05) بلا رقم سطر. مورد رجوع: لا في أصل الأحكام.",
+      "logic": null
+    },
+    {
+      "id": "H8-01c",
+      "unit": "H8",
+      "title": "دمان بينهما نقاء أقل من عشرة — الاحتياط الاستحبابي في الدمين",
+      "kind": "rule",
+      "text": "«والأحوط الأولى أن تحتاط في كلٍّ من الدمين خصوصاً في الصورة الثانية».",
+      "classification": "ihtiyat_istihbabi",
+      "sources": [
+        {
+          "src": "MNHJ",
+          "issue": "صدر الفصل",
+          "url": "https://www.sistani.org/arabic/book/23720/4587/",
+          "quote": "صدر الفصل الخامس"
+        },
+        {
+          "src": "JAMI",
+          "issue": "555",
+          "url": "https://www.sistani.org/persian/book/26575/5926/"
+        }
+      ],
+      "applies": {
+        "subject": "HAYD",
+        "womanTypes": [
+          "ANY"
+        ],
+        "phase": "twoBloods"
+      },
+      "effect": "عند تساوي الدمين في الصفات (ولا عادة تميّز): الأول حيض فتوى، مع عرض خيار احتياط استحبابي بالجمع في كليهما، خصوصًا إذا تجاوز المجموع العشرة.",
+      "alternatives": [
+        {
+          "marja": "wahid",
+          "ruling": "هـ١٥٣: «بل تحتاط بالجمع بين تروك الحائض وأعمال المستحاضة في كل من الدمين» (أشد).",
+          "classification": "unspecified",
+          "sources": [
+            {
+              "src": "WAHD_M",
+              "issue": "الفصل الخامس",
+              "footnote": "153"
+            }
+          ],
+          "exit": false,
+          "note": "يحتاط وجوبًا حيث يستحب السيستاني."
+        }
+      ],
+      "unknownPolicy": [],
+      "ihtiyatRegistryNo": null,
+      "flags": [],
+      "verified": true,
+      "notes": "جزء من السجل H8-01؛ مذكور في قائمة الاحتياطات الاستحبابية في 09-final §١ (H8-01) بلا رقم سطر.",
+      "logic": null
+    },
+    {
+      "id": "H9-02d",
+      "unit": "H9",
+      "title": "ما يحرم عليها مما يحرم على الجنب — تمام سورة العزيمة والصحن المطهر",
+      "kind": "rule",
+      "text": "«قراءة آية السجدة من سور العزائم، وهي (الم السجدة، وفصّلت، والنجم، والعلق) والأحوط استحباباً إلحاق تمام السورة بها».\n\n«كما لا يلحق بها الصحن المطهّر وإن كان الإلحاق أحوط استحباباً».",
+      "classification": "ihtiyat_istihbabi",
+      "sources": [
+        {
+          "src": "MNHJ",
+          "issue": "صدر الفصل",
+          "url": "https://www.sistani.org/arabic/book/23720/3622/",
+          "quote": "صدر الفصل الثاني من غسل الجنابة"
+        },
+        {
+          "src": "JAMI",
+          "issue": "536"
+        }
+      ],
+      "applies": {
+        "subject": "HAYD",
+        "womanTypes": [
+          "ANY"
+        ],
+        "phase": "duties"
+      },
+      "effect": "عرض خيار احتياط استحبابي: ترك سائر آيات سور العزائم الأربع؛ وترك دخول الصحن المطهر.",
+      "alternatives": [
+        {
+          "marja": "zanjani",
+          "ruling": "«بل لا يجوز له قراءة الآيات الأخرى … من السور المذكورة على الأحوط»؛ ز-س ٣٨٧: سائر آيات السور الأربع «بنابر احتیاط» لا يجوز.",
+          "classification": "unspecified",
+          "sources": [
+            {
+              "src": "ZANJ_R",
+              "issue": "أحكام غسل الجنابة",
+              "page": "قبل ٣٩٤"
+            },
+            {
+              "src": "ZANJ_Q",
+              "issue": "387"
+            }
+          ],
+          "exit": false,
+          "note": "أشد (يحتاط في سائر الآيات حيث يستحب السيستاني)."
+        }
+      ],
+      "unknownPolicy": [],
+      "ihtiyatRegistryNo": null,
+      "flags": [],
+      "verified": true,
+      "notes": "جزء من السجل H9-02؛ مذكور في قائمة الاحتياطات الاستحبابية في 09-final §١ (H9-02) بلا رقم سطر. الجامع ج م٥٣٦: سائر آيات السور الأربع احتياط مستحب.",
+      "logic": null
+    },
+    {
+      "id": "H9-05",
+      "unit": "H9",
+      "title": "الكفارة",
+      "kind": "rule",
+      "text": "«الأحوط استحباباً للزوج - دون الزوجة - الكفّارة عن الوطء في أوّل الحيض بدينار، وفي وسطه بنصف دينار وفي آخره بربع دينار. والدينار هو (18) حُمّصة من الذهب المسكوك … ولا شيء على الساهي والناسي والجاهل بالموضوع أو الحكم».",
+      "classification": "ihtiyat_istihbabi",
+      "sources": [
+        {
+          "src": "MNHJ",
+          "issue": "229",
+          "url": "https://www.sistani.org/arabic/book/23720/4590/"
+        },
+        {
+          "src": "QA",
+          "issue": "3513",
+          "url": "https://www.sistani.org/arabic/qa/3513/"
+        },
+        {
+          "src": "JAMI",
+          "issue": "515"
+        }
+      ],
+      "applies": {
+        "subject": "HAYD",
+        "womanTypes": [
+          "ANY"
+        ],
+        "phase": "duties"
+      },
+      "effect": "عرض اختياري «كفارة مستحبة» بثلث الحيض.",
+      "alternatives": [
+        {
+          "marja": "zanjani",
+          "ruling": "ز «كفارة الجماع» ص٨٦ و«٢٩٠–٢٩٧» ص٨٦–٨٧: الاستغفار واجب والكفارة مستحبة «بل هو الموافق للاحتياط الاستحبابي»، بتفصيل الدينار ٢٢ حمصة ونصفه وربعه.",
+          "classification": "ihtiyat_istihbabi",
+          "sources": [
+            {
+              "src": "ZANJ_R",
+              "issue": "كفارة الجماع",
+              "page": "٨٦"
+            },
+            {
+              "src": "ZANJ_R",
+              "issue": "٢٩٠–٢٩٧",
+              "page": "٨٦–٨٧"
+            }
+          ],
+          "exit": false,
+          "note": "موافق؛ يختلف في مقدار الدينار (٢٢ حمصة)."
+        },
+        {
+          "marja": "wahid",
+          "ruling": "هـ١٧٢: «في عدم ثبوت الكفارة على الجاهل المقصر إشكال».",
+          "classification": "ishkal",
+          "sources": [
+            {
+              "src": "WAHD_M",
+              "issue": "229",
+              "footnote": "172"
+            }
+          ],
+          "exit": false,
+          "note": "إشكال في الجاهل المقصر."
+        }
+      ],
+      "unknownPolicy": [],
+      "ihtiyatRegistryNo": null,
+      "flags": [],
+      "verified": true,
+      "notes": "مورد رجوع: لا (استحبابي)؛ مذكور في قائمة الاحتياطات الاستحبابية في 09-final §١ (H9-05). الجامع ج م٥١٥: الاستغفار واجب والكفارة احتياط مستحب، بالمثقال الشرعي مقسّمًا بالأثلاث بالليل والنهار؛ والزوجة إن طاوعت آثمة بلا كفارة.",
+      "logic": null
+    },
+    {
+      "id": "H9-07c",
+      "unit": "H9",
+      "title": "غسل الحيض — الوضوء قبل الغسل",
+      "kind": "rule",
+      "text": "«ويجزئ عن الوضوء كغسل الجنابة، وإن كان الأحوط استحباباً بل الأفضل الوضوء قبله».",
+      "classification": "ihtiyat_istihbabi",
+      "sources": [
+        {
+          "src": "MNHJ",
+          "issue": "231",
+          "url": "https://www.sistani.org/arabic/book/23720/4590/"
+        },
+        {
+          "src": "JAMI",
+          "issue": "523"
+        }
+      ],
+      "applies": {
+        "subject": "HAYD",
+        "womanTypes": [
+          "ANY"
+        ],
+        "phase": "post"
+      },
+      "effect": "عرض خيار احتياط استحبابي: الوضوء قبل غسل الحيض (الغسل يجزئ عن الوضوء).",
+      "alternatives": [
+        {
+          "marja": "zanjani",
+          "ruling": "الأحوط استحبابًا الوضوء.",
+          "classification": "ihtiyat_istihbabi",
+          "sources": [
+            {
+              "src": "ZANJ_R",
+              "issue": "وظيفة الحائض بعد انقطاع دم الحيض",
+              "page": "٨٧"
+            }
+          ],
+          "exit": false,
+          "note": "موافق."
+        }
+      ],
+      "unknownPolicy": [],
+      "ihtiyatRegistryNo": null,
+      "flags": [],
+      "verified": true,
+      "notes": "جزء من السجل H9-07؛ مذكور في قائمة الاحتياطات الاستحبابية في 09-final §١ (H9-07) بلا رقم سطر.",
+      "logic": null
+    }
+  ]
+}

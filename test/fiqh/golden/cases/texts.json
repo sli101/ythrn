@@ -1,0 +1,2149 @@
+[
+  {
+    "id": "G-TXT-001",
+    "group": "text",
+    "title": "ستة دم ثم سبعة نقاء ثم دم العادة: الثلاثة الأولى حيض والباقي استحاضة والثاني حيض",
+    "source": "س ٣٧٠٠",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "ANY"
+    },
+    "timeline": [
+      {
+        "days": "1-6",
+        "blood": true
+      },
+      {
+        "days": "7-13",
+        "blood": false
+      },
+      {
+        "days": "14-18",
+        "blood": true
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-3",
+        "state": "HAYD"
+      },
+      {
+        "days": "4-6",
+        "state": "IST"
+      },
+      {
+        "days": "14-18",
+        "state": "HAYD"
+      }
+    ],
+    "notes": "افتراض: الدم يبدأ فجر اليوم ١؛ طول «دم العادة» الثاني غير مذكور في النص فجُعل خمسة أيام (١٤–١٨).",
+    "pendingOwner": "تعارض ظاهر: س ٣٧٠٠ يجعل الثلاثة الأولى من الدم الأول حيضًا والثاني حيضًا، بينما م٢٢١ (H8-01a) في دمين بينهما نقاء أقل من عشرة ومجموعهما أكثر من عشرة: ما في العادة حيض والآخر استحاضة مطلقًا. يحتاج حسمًا قبل التشغيل؛ والملف الشخصي يحتاج عادة (دم العادة)."
+  },
+  {
+    "id": "G-TXT-002",
+    "group": "text",
+    "title": "عشرة دم ثم ستة نقاء ثم أربعة واجد: الثاني ليس بحيض لعدم تمام أقل الطهر",
+    "source": "ج م٥٠٤",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "ANY"
+    },
+    "timeline": [
+      {
+        "days": "1-10",
+        "blood": true
+      },
+      {
+        "days": "11-16",
+        "blood": false
+      },
+      {
+        "days": "17-20",
+        "blood": true,
+        "props": "wajid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "17-20",
+        "state": "NOT_HAYD"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-003",
+    "group": "text",
+    "title": "يومان دم ثم يوم نقاء تام ثم يوم دم: ليس بحيض لانتفاء التوالي",
+    "source": "ج م٥٠٠",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "ANY"
+    },
+    "timeline": [
+      {
+        "days": "1-2",
+        "blood": true
+      },
+      {
+        "days": "3",
+        "blood": false,
+        "kursuf": "clean"
+      },
+      {
+        "days": "4",
+        "blood": true
+      },
+      {
+        "days": "5",
+        "blood": false
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-4",
+        "state": "NOT_HAYD"
+      }
+    ],
+    "notes": "افتراض: دم اليوم الرابع يوم واحد ثم نقاء (المحرك يعدّ آخر مقطع دم جاريًا ما لم يُذكر نقاء بعده)."
+  },
+  {
+    "id": "G-TXT-004",
+    "group": "text",
+    "title": "يومان دم ثم خمس ساعات نقاء ثم يومان دم: ليس بحيض",
+    "source": "ج م٥٠٣ هـ١",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "ANY"
+    },
+    "timeline": [
+      {
+        "at": "D1 fajr",
+        "event": "bloodStart"
+      },
+      {
+        "at": "D3 fajr",
+        "event": "fullStop",
+        "minutes": 300
+      },
+      {
+        "at": "D5 09:30",
+        "event": "bloodStop"
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-5",
+        "state": "NOT_HAYD"
+      }
+    ],
+    "notes": "افتراض: بدء الدم فجر اليوم ١، والانقطاع التام خمس ساعات من فجر اليوم ٣ (04:30–09:30)، ثم يومان دم إلى 09:30 من اليوم ٥."
+  },
+  {
+    "id": "G-TXT-005",
+    "group": "text",
+    "title": "بدء الدم أذان ظهر الأول وانقطاعه قبل ظهر الرابع: لم تتم الثلاثة",
+    "source": "ج م٤٩٥",
+    "rules": [
+      "T-02"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "ANY"
+    },
+    "timeline": [
+      {
+        "at": "D1 noon",
+        "event": "bloodStart"
+      },
+      {
+        "at": "D4 11:00",
+        "event": "bloodStop"
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-4",
+        "state": "NOT_HAYD"
+      }
+    ],
+    "notes": "«قبل ظهر الرابع» جُعل الساعة 11:00 من اليوم ٤."
+  },
+  {
+    "id": "G-TXT-006",
+    "group": "text",
+    "title": "بدء الدم عند الفجر واستمراره إلى ليلة الحادي عشر وانقطاعه قبل فجره: كله حيض بلا تجاوز",
+    "source": "ج م٤٩٨ هـ٣",
+    "rules": [
+      "T-03"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "ANY"
+    },
+    "timeline": [
+      {
+        "at": "D1 fajr",
+        "event": "bloodStart"
+      },
+      {
+        "days": "1-10",
+        "blood": true
+      },
+      {
+        "at": "D11 04:00",
+        "event": "bloodStop"
+      }
+    ],
+    "expected": [
+      {
+        "assert": "noOverflow"
+      },
+      {
+        "days": "1-10",
+        "state": "HAYD"
+      }
+    ],
+    "notes": "ليلة الحادي عشر = الليلة التي تلي اليوم ١٠ (تحمل رقمه)؛ «قبل فجره» جُعل 04:00 من اليوم ١١."
+  },
+  {
+    "id": "G-TXT-007",
+    "group": "text",
+    "title": "بدء الدم عند الفجر واستمراره إلى ظهر الحادي عشر: تجاوز العشرة فتُطبَّق قواعد النوع",
+    "source": "ج م٤٩٨",
+    "rules": [
+      "T-03"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "ANY"
+    },
+    "timeline": [
+      {
+        "at": "D1 fajr",
+        "event": "bloodStart"
+      },
+      {
+        "days": "1-10",
+        "blood": true
+      },
+      {
+        "at": "D11 noon",
+        "event": "bloodStop"
+      }
+    ],
+    "expected": [
+      {
+        "assert": "overflow"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-008",
+    "group": "text",
+    "title": "انقطاع في الخامس بقطنة نظيفة ثم قطرات صفراء في التاسع: النقاء جمع والقطرات حيض وما بعدها طهر",
+    "source": "س ٣٤٩٤",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "ANY"
+    },
+    "timeline": [
+      {
+        "days": "1-4",
+        "blood": true
+      },
+      {
+        "days": "5-8",
+        "blood": false,
+        "kursuf": "clean"
+      },
+      {
+        "days": "9",
+        "blood": "spots",
+        "props": "faqid"
+      },
+      {
+        "days": "10-14",
+        "blood": false,
+        "kursuf": "clean"
+      }
+    ],
+    "expected": [
+      {
+        "days": "5-8",
+        "state": "JAM3"
+      },
+      {
+        "days": "9",
+        "state": "HAYD"
+      },
+      {
+        "days": "10-14",
+        "state": "TAHIR"
+      }
+    ],
+    "notes": "افتراض: الدم بدأ فجر اليوم ١ وانقطع بدخول الخامس. النص: «الخامس–التاسع جمع» أي حتى ظهور القطرات؛ وبدقّة اليوم جُعل التاسع (يوم القطرات) حيضًا و٥–٨ جمعًا. طول الطهر اللاحق غير مذكور فجُعل ١٠–١٤."
+  },
+  {
+    "id": "G-TXT-009",
+    "group": "text",
+    "title": "VW عادة ١–٧ ودم متصل ١–١٢: أيام العادة حيض والباقي استحاضة",
+    "source": "ج م٥٥٩",
+    "rules": [
+      "H7-01"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-12",
+        "blood": true
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-7",
+        "state": "HAYD"
+      },
+      {
+        "days": "8-12",
+        "state": "IST"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-010",
+    "group": "text",
+    "title": "VW عادة ١–٥ ودم ١–٢٠ فيه واجد ١٦–٢٠ بعد عشرة من الحيض ثم طهر عشرة: الواجد حيض مستقل",
+    "source": "ج م٥٥٩ د",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 5
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-5",
+        "blood": true
+      },
+      {
+        "days": "6-15",
+        "blood": true,
+        "props": "faqid"
+      },
+      {
+        "days": "16-20",
+        "blood": true,
+        "props": "wajid"
+      },
+      {
+        "days": "21-30",
+        "blood": false
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-5",
+        "state": "HAYD"
+      },
+      {
+        "days": "6-15",
+        "state": "IST"
+      },
+      {
+        "days": "16-20",
+        "state": "HAYD"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-011",
+    "group": "text",
+    "title": "VW عادة ١–٥ ودم ١–٢٠ فيه واجد ١٤–٢٠ قبل تمام عشرة من الحيض: الواجد استحاضة",
+    "source": "ج م٥٥٩ د",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 5
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-5",
+        "blood": true
+      },
+      {
+        "days": "6-13",
+        "blood": true,
+        "props": "faqid"
+      },
+      {
+        "days": "14-20",
+        "blood": true,
+        "props": "wajid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-5",
+        "state": "HAYD"
+      },
+      {
+        "days": "6-20",
+        "state": "IST"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-012",
+    "group": "text",
+    "title": "VW عادة ثلاثة ثم انقطاع ثم عود واجد ثم أصفر فتجاوز: العادة والواجد حيض والنقاء جمع والأصفر استحاضة",
+    "source": "م٢٢١",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 3
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-3",
+        "blood": true,
+        "props": "wajid"
+      },
+      {
+        "days": "4-5",
+        "blood": false
+      },
+      {
+        "days": "6-8",
+        "blood": true,
+        "props": "wajid"
+      },
+      {
+        "days": "9-12",
+        "blood": true,
+        "props": "faqid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-3",
+        "state": "HAYD"
+      },
+      {
+        "days": "4-5",
+        "state": "JAM3"
+      },
+      {
+        "days": "6-8",
+        "state": "HAYD"
+      },
+      {
+        "days": "9-12",
+        "state": "IST"
+      }
+    ],
+    "notes": "النص لا يحدد أطوال المقاطع؛ افتُرض: العادة ١–٣، النقاء ٤–٥، العود الواجد ٦–٨، الأصفر ٩–١٢ (يتجاوز العشرة)."
+  },
+  {
+    "id": "G-TXT-013",
+    "group": "text",
+    "title": "VW عادة ٥–٩ ودم ٥–٩ ونقاء ١٠ ودم فاقد ١١–١٦: العادة حيض والفاقد استحاضة والنقاء طهر",
+    "source": "ج م٥٦٢ مثال ١",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 5,
+        "count": 5
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-4",
+        "blood": false
+      },
+      {
+        "days": "5-9",
+        "blood": true
+      },
+      {
+        "days": "10",
+        "blood": false
+      },
+      {
+        "days": "11-16",
+        "blood": true,
+        "props": "faqid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "5-9",
+        "state": "HAYD"
+      },
+      {
+        "days": "10",
+        "state": "TAHIR"
+      },
+      {
+        "days": "11-16",
+        "state": "IST"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-014",
+    "group": "text",
+    "title": "VW عادة ٥–٩ ودم ٥–٩ ونقاء ١٠ ودم ١١–١٦ أوله واجد: العادة والواجد حيض والفاقد استحاضة والنقاء جمع",
+    "source": "ج م٥٦٢ مثال ٢",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 5,
+        "count": 5
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-4",
+        "blood": false
+      },
+      {
+        "days": "5-9",
+        "blood": true
+      },
+      {
+        "days": "10",
+        "blood": false
+      },
+      {
+        "days": "11-13",
+        "blood": true,
+        "props": "wajid"
+      },
+      {
+        "days": "14-16",
+        "blood": true,
+        "props": "faqid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "5-9",
+        "state": "HAYD"
+      },
+      {
+        "days": "10",
+        "state": "JAM3"
+      },
+      {
+        "days": "11-13",
+        "state": "HAYD"
+      },
+      {
+        "days": "14-16",
+        "state": "IST"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-015",
+    "group": "text",
+    "title": "VW عادة ١١–١٥ ودم ٥–٩ ونقاء ١٠ ودم ١١–١٥: العادة حيض وما قبلها استحاضة والنقاء طهر",
+    "source": "ج م٥٦٢ (٢)",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 11,
+        "count": 5
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-4",
+        "blood": false
+      },
+      {
+        "days": "5-9",
+        "blood": true
+      },
+      {
+        "days": "10",
+        "blood": false
+      },
+      {
+        "days": "11-15",
+        "blood": true
+      }
+    ],
+    "expected": [
+      {
+        "days": "5-9",
+        "state": "IST"
+      },
+      {
+        "days": "10",
+        "state": "TAHIR"
+      },
+      {
+        "days": "11-15",
+        "state": "HAYD"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-016",
+    "group": "text",
+    "title": "VW عادة ١–٥ لم ترَ فيها؛ فاقد ٧–١١ ونقاء ١٢–١٣ وواجد ١٤–١٨: الواجد حيض والفاقد استحاضة والنقاء طهر",
+    "source": "ج م٥٦٢ (٣)",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 5
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-6",
+        "blood": false
+      },
+      {
+        "days": "7-11",
+        "blood": true,
+        "props": "faqid"
+      },
+      {
+        "days": "12-13",
+        "blood": false
+      },
+      {
+        "days": "14-18",
+        "blood": true,
+        "props": "wajid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "7-11",
+        "state": "IST"
+      },
+      {
+        "days": "12-13",
+        "state": "TAHIR"
+      },
+      {
+        "days": "14-18",
+        "state": "HAYD"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-017",
+    "group": "text",
+    "title": "VW عادة ٣–١٠ مع تعجيل عرفي: دم ١–٦ ونقاء ٧–٨ ودم ٩–١٥ → ١–٦ و٩–١٠ حيض و٧–٨ جمع والباقي استحاضة",
+    "source": "ج م٥٦٣ مثال ١",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 3,
+        "count": 8
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-6",
+        "blood": true
+      },
+      {
+        "days": "7-8",
+        "blood": false
+      },
+      {
+        "days": "9-15",
+        "blood": true
+      }
+    ],
+    "answers": {
+      "isEarlyHabit": true
+    },
+    "expected": [
+      {
+        "days": "1-6",
+        "state": "HAYD"
+      },
+      {
+        "days": "7-8",
+        "state": "JAM3"
+      },
+      {
+        "days": "9-10",
+        "state": "HAYD"
+      },
+      {
+        "days": "11-15",
+        "state": "IST"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-018",
+    "group": "text",
+    "title": "VW عادة ١٠–١٨ مع تعجيل: دم ٧–١٤ ونقاء ١٥–١٦ ودم ١٧–٢٠ → ٩–١٤ و١٧–١٨ حيض و٧–٨ لا و١٩–٢٠ استحاضة",
+    "source": "ج م٥٦٣ مثال ٢",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 10,
+        "count": 9
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-6",
+        "blood": false
+      },
+      {
+        "days": "7-14",
+        "blood": true
+      },
+      {
+        "days": "15-16",
+        "blood": false
+      },
+      {
+        "days": "17-20",
+        "blood": true
+      }
+    ],
+    "answers": {
+      "isEarlyHabit": true
+    },
+    "expected": [
+      {
+        "days": "7-8",
+        "state": "NOT_HAYD",
+        "note": "يُخرج ١٧–١٨ عن العشرة فلا يُجعل حيضًا"
+      },
+      {
+        "days": "9-14",
+        "state": "HAYD"
+      },
+      {
+        "days": "17-18",
+        "state": "HAYD"
+      },
+      {
+        "days": "19-20",
+        "state": "IST"
+      }
+    ],
+    "notes": "النص لا يحكم على النقاء ١٥–١٦ صراحة فلم يُدرج."
+  },
+  {
+    "id": "G-TXT-019",
+    "group": "text",
+    "title": "VW عادة ٤–١٠ (سبعة): دم ١–٤ ونقاء ٥–٦ ودم ٧–١٢ → ١–٤ و٧–١٠ حيض و٥–٦ جمع و١١–١٢ استحاضة",
+    "source": "ج م٥٦٣ (٢) مثال ١",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 4,
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-4",
+        "blood": true
+      },
+      {
+        "days": "5-6",
+        "blood": false
+      },
+      {
+        "days": "7-12",
+        "blood": true
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-4",
+        "state": "HAYD"
+      },
+      {
+        "days": "5-6",
+        "state": "JAM3"
+      },
+      {
+        "days": "7-10",
+        "state": "HAYD"
+      },
+      {
+        "days": "11-12",
+        "state": "IST"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-020",
+    "group": "text",
+    "title": "VW عادة ١–٨: دم ١–٤ ونقاء ٥–٦ ودم ٧–١٢ → ١–٤ و٧–٨ حيض و٥–٦ جمع و٩–١٢ استحاضة",
+    "source": "ج م٥٦٤ (١)",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 8
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-4",
+        "blood": true
+      },
+      {
+        "days": "5-6",
+        "blood": false
+      },
+      {
+        "days": "7-12",
+        "blood": true
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-4",
+        "state": "HAYD"
+      },
+      {
+        "days": "5-6",
+        "state": "JAM3"
+      },
+      {
+        "days": "7-8",
+        "state": "HAYD"
+      },
+      {
+        "days": "9-12",
+        "state": "IST"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-021",
+    "group": "text",
+    "title": "W عادة ٧: فاقد ١–٦ وواجد ٧–١٠ وفاقد ١١–١٥ → الواجد مع التكميل من السابق (٤–١٠) حيض والباقي استحاضة",
+    "source": "ج م٥٧٩ ج",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "W",
+      "habit": {
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-6",
+        "blood": true,
+        "props": "faqid"
+      },
+      {
+        "days": "7-10",
+        "blood": true,
+        "props": "wajid"
+      },
+      {
+        "days": "11-15",
+        "blood": true,
+        "props": "faqid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-3",
+        "state": "IST"
+      },
+      {
+        "days": "4-10",
+        "state": "HAYD"
+      },
+      {
+        "days": "11-15",
+        "state": "IST"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-022",
+    "group": "text",
+    "title": "W عادة ٥: خمسة أسود وتسعة أصفر وخمسة أسود → الأول حيض والباقي استحاضة",
+    "source": "ج م٥٧٩ ذيل",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "W",
+      "habit": {
+        "count": 5
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-5",
+        "blood": true,
+        "props": "wajid"
+      },
+      {
+        "days": "6-14",
+        "blood": true,
+        "props": "faqid"
+      },
+      {
+        "days": "15-19",
+        "blood": true,
+        "props": "wajid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-5",
+        "state": "HAYD"
+      },
+      {
+        "days": "6-19",
+        "state": "IST"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-023",
+    "group": "text",
+    "title": "W عادة ٥: خمسة أسود وعشرة أصفر وخمسة أسود → الأول والثالث حيض والوسط استحاضة",
+    "source": "ج م٥٧٩ ذيل",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "W",
+      "habit": {
+        "count": 5
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-5",
+        "blood": true,
+        "props": "wajid"
+      },
+      {
+        "days": "6-15",
+        "blood": true,
+        "props": "faqid"
+      },
+      {
+        "days": "16-20",
+        "blood": true,
+        "props": "wajid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-5",
+        "state": "HAYD"
+      },
+      {
+        "days": "6-15",
+        "state": "IST"
+      },
+      {
+        "days": "16-20",
+        "state": "HAYD"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-024",
+    "group": "text",
+    "title": "W عادة ٧: واجد ١–٥ ونقاء ٦–٧ وفاقد ٨–١٤ → ١–٥ حيض و٨–١٤ استحاضة",
+    "source": "ج م٥٨٢ أ مثال ١",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "W",
+      "habit": {
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-5",
+        "blood": true,
+        "props": "wajid"
+      },
+      {
+        "days": "6-7",
+        "blood": false
+      },
+      {
+        "days": "8-14",
+        "blood": true,
+        "props": "faqid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-5",
+        "state": "HAYD"
+      },
+      {
+        "days": "8-14",
+        "state": "IST"
+      }
+    ],
+    "notes": "النص لا يحكم على النقاء ٦–٧ صراحة فلم يُدرج."
+  },
+  {
+    "id": "G-TXT-025",
+    "group": "text",
+    "title": "W عادة ٧: واجد ١–٤ ونقاء ٥ وفاقد ٦–١١ → ١–٤ و٦–٧ حيض بالتكميل و٥ جمع و٨–١١ استحاضة",
+    "source": "ج م٥٨٢ أ (التكميل)",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "W",
+      "habit": {
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-4",
+        "blood": true,
+        "props": "wajid"
+      },
+      {
+        "days": "5",
+        "blood": false
+      },
+      {
+        "days": "6-11",
+        "blood": true,
+        "props": "faqid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-4",
+        "state": "HAYD"
+      },
+      {
+        "days": "5",
+        "state": "JAM3"
+      },
+      {
+        "days": "6-7",
+        "state": "HAYD"
+      },
+      {
+        "days": "8-11",
+        "state": "IST"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-026",
+    "group": "text",
+    "title": "V أولها الأول ودم ١–١٥ واجده ٣–٧ وعادة الأقارب ٧ → ١–٧ حيض و٨–١٥ استحاضة",
+    "source": "ج م٥٧٢ ب٢",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "V",
+      "habit": {
+        "anchor": "start",
+        "start": 1
+      },
+      "kinCount": 7
+    },
+    "timeline": [
+      {
+        "days": "1-2",
+        "blood": true,
+        "props": "faqid"
+      },
+      {
+        "days": "3-7",
+        "blood": true,
+        "props": "wajid"
+      },
+      {
+        "days": "8-15",
+        "blood": true,
+        "props": "faqid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-7",
+        "state": "HAYD"
+      },
+      {
+        "days": "8-15",
+        "state": "IST"
+      }
+    ],
+    "notes": "ما عدا المقطع الواجد المذكور جُعل فاقدًا."
+  },
+  {
+    "id": "G-TXT-027",
+    "group": "text",
+    "title": "V أولها الأول ودم ١–١٥ واجده ٣–٨ وعادة الأقارب ٧ → ١–٨ حيض و٩–١٥ استحاضة",
+    "source": "ج م٥٧٢ ب٢",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "V",
+      "habit": {
+        "anchor": "start",
+        "start": 1
+      },
+      "kinCount": 7
+    },
+    "timeline": [
+      {
+        "days": "1-2",
+        "blood": true,
+        "props": "faqid"
+      },
+      {
+        "days": "3-8",
+        "blood": true,
+        "props": "wajid"
+      },
+      {
+        "days": "9-15",
+        "blood": true,
+        "props": "faqid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-8",
+        "state": "HAYD"
+      },
+      {
+        "days": "9-15",
+        "state": "IST"
+      }
+    ],
+    "notes": "ما عدا المقطع الواجد المذكور جُعل فاقدًا."
+  },
+  {
+    "id": "G-TXT-028",
+    "group": "text",
+    "title": "V أولها الأول ودم ١–١٥ واجده ٩–١٠ فقط وعادة الأقارب ٩ → ١–١٠ حيض و١١–١٥ استحاضة",
+    "source": "ج م٥٧٢ ج وهامش [8]",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "V",
+      "habit": {
+        "anchor": "start",
+        "start": 1
+      },
+      "kinCount": 9
+    },
+    "timeline": [
+      {
+        "days": "1-8",
+        "blood": true,
+        "props": "faqid"
+      },
+      {
+        "days": "9-10",
+        "blood": true,
+        "props": "wajid"
+      },
+      {
+        "days": "11-15",
+        "blood": true,
+        "props": "faqid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-10",
+        "state": "HAYD"
+      },
+      {
+        "days": "11-15",
+        "state": "IST"
+      }
+    ],
+    "notes": "الواجد أقل من ثلاثة فيُلحق بأيام الأقارب ضمن العشرة. فرع ثانٍ في النص (هامش [8]): لو كان الواجد ١٠–١١ فلا يُجعل اليوم ١١ حيضًا لخروجه عن العشرة من أول الدم؛ لم يُفرد له حالة لأن المعرّف لا يقبل لاحقة."
+  },
+  {
+    "id": "G-TXT-029",
+    "group": "text",
+    "title": "V أولها الأول: واجد ١–٤ وفاقد ٥–٨ وواجد ٩–١٢ → ١–٤ حيض فقط",
+    "source": "ج م٥٧٤",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "V",
+      "habit": {
+        "anchor": "start",
+        "start": 1
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-4",
+        "blood": true,
+        "props": "wajid"
+      },
+      {
+        "days": "5-8",
+        "blood": true,
+        "props": "faqid"
+      },
+      {
+        "days": "9-12",
+        "blood": true,
+        "props": "wajid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-4",
+        "state": "HAYD"
+      },
+      {
+        "days": "9-12",
+        "state": "NOT_HAYD",
+        "note": "لم يفصل بينه وبين الأول أقل الطهر"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-030",
+    "group": "text",
+    "title": "V أولها الأول: واجد ١–٤ وفاقد ٥–١٤ وواجد ١٥–١٨ → ١–٤ و١٥–١٨ حيض",
+    "source": "ج م٥٧٤",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "V",
+      "habit": {
+        "anchor": "start",
+        "start": 1
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-4",
+        "blood": true,
+        "props": "wajid"
+      },
+      {
+        "days": "5-14",
+        "blood": true,
+        "props": "faqid"
+      },
+      {
+        "days": "15-18",
+        "blood": true,
+        "props": "wajid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-4",
+        "state": "HAYD"
+      },
+      {
+        "days": "15-18",
+        "state": "HAYD"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-031",
+    "group": "text",
+    "title": "V أولها الخامس: دم ٥–٩ ونقاء ١٠ وواجد ١١–١٦ → ٥–٩ و١١–١٤ حيض و١٠ جمع و١٥–١٦ استحاضة",
+    "source": "ج م٥٧٥",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "V",
+      "habit": {
+        "anchor": "start",
+        "start": 5
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-4",
+        "blood": false
+      },
+      {
+        "days": "5-9",
+        "blood": true
+      },
+      {
+        "days": "10",
+        "blood": false
+      },
+      {
+        "days": "11-16",
+        "blood": true,
+        "props": "wajid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "5-9",
+        "state": "HAYD"
+      },
+      {
+        "days": "10",
+        "state": "JAM3"
+      },
+      {
+        "days": "11-14",
+        "state": "HAYD"
+      },
+      {
+        "days": "15-16",
+        "state": "IST"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-032",
+    "group": "text",
+    "title": "مبتدئة: خمسة أسود وتسعة أصفر وخمسة أسود → الأول حيض والباقي استحاضة",
+    "source": "ج م٥٨٦",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB"
+    },
+    "timeline": [
+      {
+        "days": "1-5",
+        "blood": true,
+        "props": "wajid"
+      },
+      {
+        "days": "6-14",
+        "blood": true,
+        "props": "faqid"
+      },
+      {
+        "days": "15-19",
+        "blood": true,
+        "props": "wajid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-5",
+        "state": "HAYD"
+      },
+      {
+        "days": "6-19",
+        "state": "IST"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-033",
+    "group": "text",
+    "title": "مبتدئة: خمسة أسود وعشرة أصفر وخمسة أسود → الأول والثالث حيض",
+    "source": "ج م٥٨٦",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB"
+    },
+    "timeline": [
+      {
+        "days": "1-5",
+        "blood": true,
+        "props": "wajid"
+      },
+      {
+        "days": "6-15",
+        "blood": true,
+        "props": "faqid"
+      },
+      {
+        "days": "16-20",
+        "blood": true,
+        "props": "wajid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-5",
+        "state": "HAYD"
+      },
+      {
+        "days": "16-20",
+        "state": "HAYD"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-034",
+    "group": "text",
+    "title": "مضطربة ناقصة ٦–٧ مع تجاوز والناتج بالأقارب ٥ → تجعل ٦",
+    "source": "ج م٥٨١",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUD",
+      "habit": {
+        "deficient": {
+          "min": 6,
+          "max": 7
+        }
+      },
+      "kinCount": 5
+    },
+    "timeline": [
+      {
+        "days": "1-12",
+        "blood": true
+      }
+    ],
+    "answers": {
+      "kinConditionsMet": true
+    },
+    "expected": [
+      {
+        "assert": "haydCount",
+        "value": 6
+      },
+      {
+        "days": "1-6",
+        "state": "HAYD"
+      },
+      {
+        "days": "7-12",
+        "state": "IST"
+      }
+    ],
+    "notes": "النص لا يذكر مدخلات الدم؛ افتُرض دم متصل بلون واحد ١–١٢ يبدأ فجر الأول فيُجعل أول ٦ حيضًا."
+  },
+  {
+    "id": "G-TXT-035",
+    "group": "text",
+    "title": "مضطربة ناقصة ٦–٧ مع تجاوز والناتج ٨ → تجعل ٧",
+    "source": "ج م٥٨١",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUD",
+      "habit": {
+        "deficient": {
+          "min": 6,
+          "max": 7
+        }
+      },
+      "kinCount": 8
+    },
+    "timeline": [
+      {
+        "days": "1-12",
+        "blood": true
+      }
+    ],
+    "answers": {
+      "kinConditionsMet": true
+    },
+    "expected": [
+      {
+        "assert": "haydCount",
+        "value": 7
+      },
+      {
+        "days": "1-7",
+        "state": "HAYD"
+      },
+      {
+        "days": "8-12",
+        "state": "IST"
+      }
+    ],
+    "notes": "النص لا يذكر مدخلات الدم؛ افتُرض دم متصل بلون واحد ١–١٢ يبدأ فجر الأول والناتج ٨ بعادة الأقارب."
+  },
+  {
+    "id": "G-TXT-036",
+    "group": "text",
+    "title": "ناسية العدد (٨ أو ٩) مع تجاوز والناتج بالضوابط ٧ → تجعل ٨",
+    "source": "م٢٢٣",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "NAS_C",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "memory": {
+          "countMin": 8,
+          "countMax": 9
+        }
+      },
+      "kinCount": 7
+    },
+    "timeline": [
+      {
+        "days": "1-12",
+        "blood": true
+      }
+    ],
+    "answers": {
+      "kinConditionsMet": true
+    },
+    "expected": [
+      {
+        "assert": "haydCount",
+        "value": 8
+      },
+      {
+        "days": "1-8",
+        "state": "HAYD"
+      },
+      {
+        "days": "9-12",
+        "state": "IST"
+      }
+    ],
+    "notes": "النص لا يذكر مدخلات الدم؛ افتُرض دم متصل بلون واحد ١–١٢ يبدأ فجر الأول في وقتها (أولها الأول) والناتج ٧ بعادة الأقارب."
+  },
+  {
+    "id": "G-TXT-037",
+    "group": "text",
+    "title": "ناسية العدد (٥ أو ٦) والناتج بالضوابط ٨ → تجعل ٦",
+    "source": "م٢٢٣",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "NAS_C",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "memory": {
+          "countMin": 5,
+          "countMax": 6
+        }
+      },
+      "kinCount": 8
+    },
+    "timeline": [
+      {
+        "days": "1-12",
+        "blood": true
+      }
+    ],
+    "answers": {
+      "kinConditionsMet": true
+    },
+    "expected": [
+      {
+        "assert": "haydCount",
+        "value": 6
+      },
+      {
+        "days": "1-6",
+        "state": "HAYD"
+      },
+      {
+        "days": "7-12",
+        "state": "IST"
+      }
+    ],
+    "notes": "النص لا يذكر مدخلات الدم؛ افتُرض دم متصل بلون واحد ١–١٢ يبدأ فجر الأول في وقتها (أولها الأول) والناتج ٨ بعادة الأقارب."
+  },
+  {
+    "id": "G-TXT-038",
+    "group": "text",
+    "title": "ناسية الوقت (تعلم أنه في العشر الثاني) ودم ١–٢٠ بلا تمييز وأقارب ٧ → ١١–١٧ حيض",
+    "source": "ج م٥٩٦",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "NAS_T",
+      "habit": {
+        "memory": {
+          "timeWindow": "11-20"
+        }
+      },
+      "kinCount": 7
+    },
+    "timeline": [
+      {
+        "days": "1-20",
+        "blood": true
+      }
+    ],
+    "answers": {
+      "kinConditionsMet": true
+    },
+    "expected": [
+      {
+        "days": "11-17",
+        "state": "HAYD"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-039",
+    "group": "text",
+    "title": "ناسية الوقت تعلم أن الثالث من عادتها: فاقد ١–١٠ وواجد ١١–٢٠ → لا يُجعل الواجد حيضًا ويؤخذ ٧ من الأول",
+    "source": "ج م٥٩٥",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "NAS_T",
+      "habit": {
+        "memory": {
+          "knownDays": [
+            3
+          ]
+        }
+      },
+      "kinCount": 7
+    },
+    "timeline": [
+      {
+        "days": "1-10",
+        "blood": true,
+        "props": "faqid"
+      },
+      {
+        "days": "11-20",
+        "blood": true,
+        "props": "wajid"
+      }
+    ],
+    "answers": {
+      "kinConditionsMet": true
+    },
+    "expected": [
+      {
+        "days": "1-7",
+        "state": "HAYD"
+      },
+      {
+        "days": "11-20",
+        "state": "NOT_HAYD",
+        "note": "يخالف ما تذكره من أن الثالث من عادتها"
+      }
+    ],
+    "notes": "knownDays [3]: تذكر أن اليوم الثالث من أيام عادتها فلا يصح جعل الحيض ١١–٢٠ لأنه لا يشمله؛ فتصير كفاقدة التمييز وتأخذ عدد الأقارب من أول الدم (٧ → ١–٧)."
+  },
+  {
+    "id": "G-TXT-040",
+    "group": "text",
+    "title": "VW ستة من الأول: انقطاع آخر السادس واغتسال ثم لطخة في التاسع ولطخة في الحادي عشر → لطخة ٩ حيض و٧–٨ جمع ثم طهر ولطخة ١١ استحاضة قليلة",
+    "source": "ج 8526 مثال ١",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 6
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-6",
+        "blood": true
+      },
+      {
+        "at": "D6 maghrib",
+        "event": "bloodStop"
+      },
+      {
+        "at": "D6 20:00",
+        "event": "ghusl"
+      },
+      {
+        "days": "7-8",
+        "blood": false
+      },
+      {
+        "days": "9",
+        "blood": "spots"
+      },
+      {
+        "days": "10",
+        "blood": false
+      },
+      {
+        "days": "11",
+        "blood": "spots"
+      },
+      {
+        "days": "12-14",
+        "blood": false
+      },
+      {
+        "at": "D11 06:00",
+        "event": "istihadhaTest",
+        "level": "qalila"
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-6",
+        "state": "HAYD"
+      },
+      {
+        "days": "7-8",
+        "state": "JAM3"
+      },
+      {
+        "days": "9",
+        "state": "HAYD"
+      },
+      {
+        "days": "10",
+        "state": "TAHIR"
+      },
+      {
+        "days": "11",
+        "state": "IST_Q"
+      }
+    ],
+    "notes": "«٩–١١ طهر» في النص يعني ما بعد لطخة التاسع إلى لطخة الحادي عشر؛ بدقّة اليوم جُعل ٩ حيضًا (اللطخة) و١٠ طهرًا و١١ استحاضة قليلة (اللطخة). وقت الغسل افتُرض 20:00 بعد الانقطاع عند مغرب السادس. أُضيف اختبار قطنة للاستحاضة في الحادي عشر (قليلة) لأن النص يصفها قليلة."
+  },
+  {
+    "id": "G-TXT-041",
+    "group": "text",
+    "title": "V أولها الأول: دم ١–٦ ولطخات ٧–٩ ودم مستمر فاقد ١٠–١١ → ١–٩ حيض و١٠–١١ استحاضة",
+    "source": "ج 8526 مثال ٤",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "V",
+      "habit": {
+        "anchor": "start",
+        "start": 1
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-6",
+        "blood": true
+      },
+      {
+        "days": "7-9",
+        "blood": "spots"
+      },
+      {
+        "days": "10-11",
+        "blood": true,
+        "props": "faqid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-9",
+        "state": "HAYD"
+      },
+      {
+        "days": "10-11",
+        "state": "IST"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-042",
+    "group": "text",
+    "title": "V أولها الأول: دم ١–٦ ولطخات ٧–٩ ودم مستمر واجد ١٠–١١ → ١–١٠ حيض و١١ استحاضة",
+    "source": "ج 8526 مثال ٥",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "V",
+      "habit": {
+        "anchor": "start",
+        "start": 1
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-6",
+        "blood": true
+      },
+      {
+        "days": "7-9",
+        "blood": "spots"
+      },
+      {
+        "days": "10-11",
+        "blood": true,
+        "props": "wajid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-10",
+        "state": "HAYD"
+      },
+      {
+        "days": "11",
+        "state": "IST"
+      }
+    ]
+  },
+  {
+    "id": "G-TXT-043",
+    "group": "text",
+    "title": "V في غير وقتها: واجد ١١–١٦ ولطخات ١٧–١٩ ودم مستمر ٢٠–٢١ → ١١–١٩ حيض و٢٠–٢١ استحاضة",
+    "source": "ج 8526 مثال ٦",
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "V",
+      "habit": {
+        "anchor": "start",
+        "start": 1
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-10",
+        "blood": false
+      },
+      {
+        "days": "11-16",
+        "blood": true,
+        "props": "wajid"
+      },
+      {
+        "days": "17-19",
+        "blood": "spots"
+      },
+      {
+        "days": "20-21",
+        "blood": true
+      }
+    ],
+    "expected": [
+      {
+        "days": "11-19",
+        "state": "HAYD"
+      },
+      {
+        "days": "20-21",
+        "state": "IST"
+      }
+    ],
+    "notes": "وقت عادتها غير مذكور؛ افتُرض أولها الأول ولم ترَ فيه، فالدم من ١١ في غير وقتها."
+  },
+  {
+    "id": "G-TXT-044",
+    "group": "text",
+    "title": "طهرت الساعة ١٠ صباحًا: أقل الطهر ينتهي الساعة ١٠ من اليوم الحادي عشر",
+    "source": "ج م٥٠٥",
+    "rules": [
+      "T-04"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "ANY"
+    },
+    "timeline": [
+      {
+        "at": "D1 10:00",
+        "event": "bloodStop"
+      }
+    ],
+    "expected": [
+      {
+        "assert": "minTuhrEndsAt",
+        "at": "D11 10:00"
+      }
+    ],
+    "notes": "الحيض السابق على الانقطاع غير مذكور؛ جُعل الانقطاع الساعة 10:00 من اليوم ١ ليكون الحادي عشر بعده هو اليوم ١١ في السيناريو."
+  },
+  {
+    "id": "G-TXT-045",
+    "group": "text",
+    "title": "نفساء ذات عادة عددية ٧: دم من الفجر تجاوز العشرة → إلى آخر ليلة الثامن نفاس ومن اليوم الثامن استحاضة",
+    "source": "ج م٦٢٢",
+    "subject": "NIFAS",
+    "profile": {
+      "womanType": "W",
+      "habit": {
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "at": "D1 fajr",
+        "event": "birth"
+      },
+      {
+        "at": "D1 fajr",
+        "event": "bloodStart"
+      },
+      {
+        "days": "1-11",
+        "blood": true
+      }
+    ],
+    "expected": [
+      {
+        "assert": "overflow"
+      },
+      {
+        "days": "1-7",
+        "state": "NIFAS"
+      },
+      {
+        "days": "8-11",
+        "state": "IST"
+      }
+    ],
+    "notes": "«ليلة الثامن» بالاصطلاح الفقهي هي الليلة السابقة لليوم الثامن، وهي في اصطلاح الملف الليلة التي تلي اليوم ٧؛ فالنفاس ١–٧ بلياليها."
+  },
+  {
+    "id": "G-TXT-046",
+    "group": "text",
+    "title": "نفساء ذات عادة عددية ٧: دم من ظهر الأول تجاوز → إلى ظهر الثامن نفاس",
+    "source": "ج م٦٢٢",
+    "subject": "NIFAS",
+    "profile": {
+      "womanType": "W",
+      "habit": {
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "at": "D1 noon",
+        "event": "birth"
+      },
+      {
+        "at": "D1 noon",
+        "event": "bloodStart"
+      },
+      {
+        "days": "2-11",
+        "blood": true
+      }
+    ],
+    "expected": [
+      {
+        "assert": "overflow"
+      },
+      {
+        "days": "1-7",
+        "state": "NIFAS"
+      },
+      {
+        "days": "9-11",
+        "state": "IST"
+      }
+    ],
+    "notes": "بالتلفيق ينتهي النفاس ظهر اليوم ٨ (نفاس قبله واستحاضة بعده)؛ لا تأكيد في المخطط لحدّ النفاس بالساعة فلم يُدرج اليوم ٨ في الناتج اليومي."
+  },
+  {
+    "id": "G-TXT-047",
+    "group": "text",
+    "title": "نفساء عددية ٧: يومان دم عند الولادة ثم انقطاع ثم دم من السادس تجاوز العاشر → ١–٢ و٦–٧ نفاس والنقاء جمع و٨–١٠ جمع نفساء/مستحاضة وبعد العاشر استحاضة",
+    "source": "م٢٥٦ (ومثال الخوئي م٢٥٦)",
+    "subject": "NIFAS",
+    "profile": {
+      "womanType": "W",
+      "habit": {
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "at": "D1 fajr",
+        "event": "birth"
+      },
+      {
+        "days": "1-2",
+        "blood": true
+      },
+      {
+        "days": "3-5",
+        "blood": false
+      },
+      {
+        "days": "6-12",
+        "blood": true
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-2",
+        "state": "NIFAS"
+      },
+      {
+        "days": "3-5",
+        "state": "JAM3_N"
+      },
+      {
+        "days": "6-7",
+        "state": "NIFAS"
+      },
+      {
+        "days": "8-10",
+        "state": "JAM3_NM"
+      },
+      {
+        "days": "11-12",
+        "state": "IST"
+      }
+    ],
+    "notes": "افتراض: الولادة وبدء الدم فجر اليوم ١، والدم الثاني ٦–١٢."
+  },
+  {
+    "id": "G-TXT-048",
+    "group": "text",
+    "title": "نفساء VW عادة ٢٠–٢٧ ولدت في العاشر ودام الدم شهرًا → ١٠–١٦ نفاس و١٧–٢٦ استحاضة ولو في العادة",
+    "source": "ج م٦٢٩",
+    "subject": "NIFAS",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 20,
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-9",
+        "blood": false
+      },
+      {
+        "at": "D10 fajr",
+        "event": "birth"
+      },
+      {
+        "days": "10-40",
+        "blood": true
+      }
+    ],
+    "expected": [
+      {
+        "assert": "overflow"
+      },
+      {
+        "days": "10-16",
+        "state": "NIFAS"
+      },
+      {
+        "days": "17-26",
+        "state": "IST",
+        "note": "ولو كان في أيام العادة الحيضية"
+      }
+    ],
+    "notes": "الجدول يذكر العادة ٢٠–٢٧ والنفاس سبعة (١٠–١٦)؛ اعتُمد العدد ٧ كما في الناتج. «ثم تنتظر عادتها» لم يُترجم إلى ناتج يومي بعد ٢٦."
+  },
+  {
+    "id": "G-TXT-049",
+    "group": "text",
+    "title": "ولادتان: دم إلى عشرة ثم ولادة أخرى على رأس العشرة ودم عشرة أخرى → نفاسان متواليان",
+    "source": "م٢٥٣",
+    "subject": "NIFAS",
+    "profile": {
+      "womanType": "ANY"
+    },
+    "timeline": [
+      {
+        "at": "D1 fajr",
+        "event": "birth"
+      },
+      {
+        "days": "1-10",
+        "blood": true
+      },
+      {
+        "at": "D11 fajr",
+        "event": "birth"
+      },
+      {
+        "days": "11-20",
+        "blood": true
+      },
+      {
+        "days": "21-23",
+        "blood": false
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-10",
+        "state": "NIFAS"
+      },
+      {
+        "days": "11-20",
+        "state": "NIFAS"
+      }
+    ],
+    "notes": "افتراض: الولادة الأولى وبدء الدم فجر اليوم ١، والثانية فجر اليوم ١١ (على رأس العشرة)."
+  },
+  {
+    "id": "G-TXT-050",
+    "group": "text",
+    "title": "ولادتان: ولادة الأول ودم إلى الثالث ثم ولادة الخامس ودم → النقاء بينهما جمع لتداخل العشرتين",
+    "source": "م٢٥٣",
+    "subject": "NIFAS",
+    "profile": {
+      "womanType": "ANY"
+    },
+    "timeline": [
+      {
+        "at": "D1 fajr",
+        "event": "birth"
+      },
+      {
+        "days": "1-3",
+        "blood": true
+      },
+      {
+        "days": "4",
+        "blood": false
+      },
+      {
+        "at": "D5 fajr",
+        "event": "birth"
+      },
+      {
+        "days": "5-10",
+        "blood": true
+      }
+    ],
+    "expected": [
+      {
+        "days": "4",
+        "state": "JAM3_N"
+      }
+    ],
+    "notes": "افتراض: الولادتان فجر اليومين ١ و٥، ومدة الدم الثاني غير مذكورة فجُعلت ٥–١٠. لم يُحكم على أيام الدم نفسها لأن الجدول لم يذكرها."
+  }
+]

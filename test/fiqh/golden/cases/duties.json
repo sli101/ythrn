@@ -1,0 +1,47 @@
+[
+  {
+    "id": "G-DUT-001",
+    "group": "duties",
+    "title": "مبتدئة بدم واجد تجاوز العشرة: أيام ما بعد عدد الأقارب التي تركت فيها الصلاة تُقضى",
+    "source": "H9-14 (ج م٦١١)؛ H7-04a",
+    "rules": ["H9-14", "H7-04a"],
+    "subject": "HAYD",
+    "profile": {"womanType": "MUB", "kinCount": 7},
+    "timeline": [{"days": "1-15", "blood": true, "props": "wajid"}],
+    "answers": {"kinConditionsMet": true},
+    "expected": [{"days": "1-7", "state": "HAYD"}, {"days": "8-15", "state": "IST"}, {"assert": "qadaPrayers", "value": 3, "note": "الأيام ٨–١٠ عوملت حيضًا ظاهرًا"}]
+  },
+  {
+    "id": "G-DUT-002",
+    "group": "duties",
+    "title": "ذات العادة الوقتية والعددية تجاوز دمها: لا قضاء لأنها عملت عمل المستحاضة بعد عادتها",
+    "source": "H6-03؛ H9-14",
+    "rules": ["H6-03", "H9-14"],
+    "subject": "HAYD",
+    "profile": {"womanType": "VW", "habit": {"anchor": "start", "start": 1, "count": 6}},
+    "timeline": [{"days": "1-14", "blood": true}],
+    "expected": [{"days": "1-6", "state": "HAYD"}, {"assert": "qadaPrayers", "value": 0}]
+  },
+  {
+    "id": "G-DUT-003",
+    "group": "duties",
+    "title": "ذات الوقت تحيضت بالرؤية ثم انقطع قبل الثلاثة: قضاء صلوات اليومين",
+    "source": "H5-01 (وجب عليها قضاء الصلاة)؛ H9-14",
+    "rules": ["H5-01", "H9-14"],
+    "subject": "HAYD",
+    "profile": {"womanType": "VW", "habit": {"anchor": "start", "start": 1, "count": 6}},
+    "timeline": [{"days": "1-2", "blood": true}, {"days": "3-12", "blood": false}],
+    "expected": [{"days": "1-2", "state": "IST"}, {"assert": "qadaPrayers", "value": 2}]
+  },
+  {
+    "id": "G-DUT-004",
+    "group": "duties",
+    "title": "انتهاء الحيض بقطنة نظيفة: تنبيه غسل الحيض",
+    "source": "H9-07a؛ H6-01",
+    "rules": ["H9-07a", "H6-01"],
+    "subject": "HAYD",
+    "profile": {"womanType": "VW", "habit": {"anchor": "start", "start": 1, "count": 6}},
+    "timeline": [{"days": "1-6", "blood": true}, {"days": "7-16", "blood": false, "kursuf": "clean"}],
+    "expected": [{"days": "1-6", "state": "HAYD"}, {"days": "7-16", "state": "TAHIR"}, {"assert": "alertGhuslHayd", "value": true}]
+  }
+]

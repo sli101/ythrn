@@ -1,0 +1,1591 @@
+[
+  {
+    "id": "G-UNK-001",
+    "group": "unknown",
+    "title": "دم فاقد للصفات لغير ذات الوقت مع الشك في استمراره ثلاثة → الجمع بين المستحاضة والحائض",
+    "source": "H3-06؛ H5-02 (م٢١٦؛ س ٣٥١٢)؛ SPEC §٦",
+    "rules": [
+      "H3-06",
+      "H5-02"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUD"
+    },
+    "timeline": [
+      {
+        "days": "1",
+        "blood": true,
+        "props": "faqid"
+      }
+    ],
+    "answers": {
+      "willLastThreeDays": "dont_remember"
+    },
+    "expected": [
+      {
+        "days": "1",
+        "state": "JAM3_M",
+        "classification": "ihtiyat_wujubi"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-002",
+    "group": "unknown",
+    "title": "الدم نفسه مع العلم بالاستمرار ثلاثة → حيض من أول الرؤية",
+    "source": "H3-06؛ H5-02",
+    "rules": [
+      "H3-06",
+      "H5-02"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUD"
+    },
+    "timeline": [
+      {
+        "days": "1",
+        "blood": true,
+        "props": "faqid"
+      }
+    ],
+    "answers": {
+      "willLastThreeDays": true
+    },
+    "expected": [
+      {
+        "days": "1",
+        "state": "HAYD"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-003",
+    "group": "unknown",
+    "title": "تمام الثلاثة متصلًا يحوّل الجمع الاحتياطي إلى حيض من الأول",
+    "source": "H3-06؛ SPEC §٥.٣ خطوة ١ و§٢.٢ خطوة ٤",
+    "rules": [
+      "H3-06",
+      "H3-01"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUD"
+    },
+    "timeline": [
+      {
+        "days": "1-4",
+        "blood": true,
+        "props": "faqid"
+      }
+    ],
+    "answers": {
+      "willLastThreeDays": "dont_remember"
+    },
+    "expected": [
+      {
+        "days": "1-4",
+        "state": "HAYD"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-004",
+    "group": "unknown",
+    "title": "انقطع قبل تمام الثلاثة بعد جمع احتياطي → استحاضة للكل وقضاء ما تُرك",
+    "source": "H3-06؛ H9-14؛ SPEC §٢.٢ خطوة ٤",
+    "rules": [
+      "H3-06",
+      "H3-01",
+      "H9-14"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUD"
+    },
+    "timeline": [
+      {
+        "days": "1-2",
+        "blood": true,
+        "props": "faqid"
+      },
+      {
+        "days": "3-5",
+        "blood": false,
+        "kursuf": "clean"
+      }
+    ],
+    "answers": {
+      "willLastThreeDays": "dont_remember"
+    },
+    "expected": [
+      {
+        "days": "1-2",
+        "state": "IST"
+      },
+      {
+        "assert": "qadaPrayers",
+        "value": 0,
+        "note": "لم تترك الصلاة لأن الجمع يوجبها"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-005",
+    "group": "unknown",
+    "title": "صفات الدم «لا أتذكر» → تُعامل فاقدة التمييز عند التجاوز (الأقارب)",
+    "source": "H7-04؛ SPEC §٦ (صفات الدم / لا أتذكر)",
+    "rules": [
+      "H7-04",
+      "H7-07"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUD",
+      "kinCount": 6
+    },
+    "timeline": [
+      {
+        "days": "1-15",
+        "blood": true,
+        "props": null
+      }
+    ],
+    "answers": {
+      "kinConditionsMet": true
+    },
+    "expected": [
+      {
+        "days": "1-6",
+        "state": "HAYD"
+      },
+      {
+        "days": "7-15",
+        "state": "IST"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-006",
+    "group": "unknown",
+    "title": "لا أقارب ولا تمييز → اختيار العدد ٣–١٠ (المختار ٧)",
+    "source": "H7-04 (م٢٢٢)؛ SPEC §٦ (عدد الأقارب / لا أتذكر)",
+    "rules": [
+      "H7-04"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB",
+      "kinCount": null,
+      "chosenCount": 7
+    },
+    "timeline": [
+      {
+        "days": "1-15",
+        "blood": true,
+        "props": null
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-7",
+        "state": "HAYD"
+      },
+      {
+        "days": "8-15",
+        "state": "IST"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-007",
+    "group": "unknown",
+    "title": "فاقدة التمييز بلا أقارب ولم تختر عددًا بعد → ينتظر مدخلًا",
+    "source": "SPEC §٢.١ PENDING؛ H7-04",
+    "rules": [
+      "H7-04"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB",
+      "kinCount": null,
+      "chosenCount": null
+    },
+    "timeline": [
+      {
+        "days": "1-11",
+        "blood": true,
+        "props": null
+      }
+    ],
+    "expected": [
+      {
+        "assert": "pendingInput",
+        "value": "chosenCount"
+      },
+      {
+        "days": "11",
+        "state": "PENDING"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-008",
+    "group": "unknown",
+    "title": "انقطاع ظاهر بعد الثلاثة مع احتمال البقاء داخلًا والقطنة لم تُجرَ → ينتظر الاستبراء",
+    "source": "H6-01؛ SPEC §٦ (اختبار القطنة / لم يُجرَ)",
+    "rules": [
+      "H6-01"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-4",
+        "blood": true
+      },
+      {
+        "days": "5",
+        "blood": false,
+        "kursuf": "none"
+      }
+    ],
+    "answers": {
+      "innerContinuity": "dont_remember"
+    },
+    "expected": [
+      {
+        "assert": "nextQuestion",
+        "value": "kursufTest"
+      },
+      {
+        "days": "5",
+        "state": "PENDING"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-009",
+    "group": "unknown",
+    "title": "القطنة نظيفة بلا اطمئنان بالعود → انتهى الحيض ووجب الغسل",
+    "source": "H6-01؛ H6-02",
+    "rules": [
+      "H6-01",
+      "H6-02"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-4",
+        "blood": true
+      },
+      {
+        "days": "5-14",
+        "blood": false,
+        "kursuf": "clean"
+      }
+    ],
+    "answers": {
+      "willReturnBeforeTen": false
+    },
+    "expected": [
+      {
+        "days": "1-4",
+        "state": "HAYD"
+      },
+      {
+        "days": "5-14",
+        "state": "TAHIR"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-010",
+    "group": "unknown",
+    "title": "القطنة نظيفة مع الاطمئنان بالعود قبل العشرة → الجمع في النقاء",
+    "source": "H6-02؛ H3-02",
+    "rules": [
+      "H6-02",
+      "H3-02"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-4",
+        "blood": true
+      },
+      {
+        "days": "5-6",
+        "blood": false,
+        "kursuf": "clean"
+      },
+      {
+        "days": "7-8",
+        "blood": true
+      },
+      {
+        "days": "9-20",
+        "blood": false,
+        "kursuf": "clean"
+      }
+    ],
+    "answers": {
+      "willReturnBeforeTen": true
+    },
+    "expected": [
+      {
+        "days": "1-4",
+        "state": "HAYD"
+      },
+      {
+        "days": "5-6",
+        "state": "JAM3",
+        "classification": "ihtiyat_wujubi"
+      },
+      {
+        "days": "7-8",
+        "state": "HAYD"
+      },
+      {
+        "days": "9-20",
+        "state": "TAHIR"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-011",
+    "group": "unknown",
+    "title": "ذات الوقت ترى الدم في وقتها → حيض بالرؤية بلا سؤال عن الصفات",
+    "source": "H5-01؛ H5-05؛ SPEC §٥.٣ خطوة ١",
+    "rules": [
+      "H5-01",
+      "H5-05"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "V",
+      "habit": {
+        "anchor": "start",
+        "start": 1
+      }
+    },
+    "timeline": [
+      {
+        "days": "1",
+        "blood": true,
+        "props": null
+      }
+    ],
+    "expected": [
+      {
+        "days": "1",
+        "state": "HAYD"
+      },
+      {
+        "assert": "nextQuestion",
+        "value": null,
+        "note": "لا يُسأل عن الصفات في الوقت"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-012",
+    "group": "unknown",
+    "title": "تاريخ انتهاء آخر حيض «لا أتذكر» مع فاصل ظاهر طويل → لا أثر",
+    "source": "SPEC §٦ (تاريخ انتهاء آخر حيض)؛ T-04",
+    "rules": [
+      "T-04",
+      "H3-03"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 6
+      },
+      "lastBloodEnd": null
+    },
+    "timeline": [
+      {
+        "days": "1-6",
+        "blood": true
+      }
+    ],
+    "answers": {},
+    "expected": [
+      {
+        "days": "1-6",
+        "state": "HAYD",
+        "note": "في وقتها؛ ولا يُسأل عن آخر انتهاء ما دام في وقت العادة"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-013",
+    "group": "unknown",
+    "title": "الشك في كونه دمًا أصلًا → لا حكم بالحيض حتى يُعلم",
+    "source": "H2 (س ١٩٨٦؛ ج م٥١١)؛ SPEC §٣.٢ isBlood",
+    "rules": [
+      "H2-04"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "ANY"
+    },
+    "timeline": [
+      {
+        "days": "1",
+        "blood": true
+      }
+    ],
+    "answers": {
+      "isBlood": "dont_remember"
+    },
+    "expected": [
+      {
+        "days": "1",
+        "state": "TAHIR",
+        "note": "الأصل عدم الحيض مع الشك في الموضوع"
+      }
+    ],
+    "notes": "المعرّف H2-04 (الإفرازات التي ليست دمًا أو يُشك فيها)."
+  },
+  {
+    "id": "G-UNK-014",
+    "group": "unknown",
+    "title": "سن غير معلوم بدقة لكن بعيد عن ٩ و٦٠ → لا أثر على الأهلية",
+    "source": "H1-01؛ H1-02؛ SPEC §٦ (تاريخ الميلاد)",
+    "rules": [
+      "H1-01",
+      "H1-02"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 6
+      },
+      "ageHijri": 30
+    },
+    "timeline": [
+      {
+        "days": "1-6",
+        "blood": true
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-6",
+        "state": "HAYD"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-015",
+    "group": "unknown",
+    "title": "فوق الستين بلا تحديد قرشية «لا أعلم» → استحاضة على الأحوط وجوبًا",
+    "source": "H1-02؛ H1-06 (م٢٣٦؛ ج م٦٣٥)؛ سجل الاحتياط ٣",
+    "rules": [
+      "H1-02",
+      "H1-06"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "ANY",
+      "ageHijri": 61,
+      "isQurashi": "dont_remember"
+    },
+    "timeline": [
+      {
+        "days": "1-5",
+        "blood": true,
+        "props": "wajid"
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-5",
+        "state": "IST",
+        "classification": "ihtiyat_wujubi"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-016",
+    "group": "unknown",
+    "title": "نوع العادة «لا أفهم» → سلّم المشاهدة: ليست أول مرة، العدد نفسه، الوقت نفسه → وقتية وعددية ثم تُسأل عن وقتها",
+    "source": "H4-01؛ SPEC §٦ (نوع العادة / لا أفهم)",
+    "rules": [
+      "H4-01"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "ANY"
+    },
+    "timeline": [
+      {
+        "days": "1",
+        "blood": true
+      }
+    ],
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "womanType",
+            "dont_understand"
+          ],
+          [
+            "firstTime",
+            false
+          ],
+          [
+            "sameCount",
+            true
+          ],
+          [
+            "sameTime",
+            true
+          ]
+        ],
+        "then": "habitStart"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-017",
+    "group": "unknown",
+    "title": "نوع العادة «لا أتذكر» → ناسيتهما بلا ذاكرة جزئية، ثم الصفات عند بدء الدم والجمع",
+    "source": "H4-05؛ H7-05؛ SPEC §٦ (نوع العادة / لا أتذكر)",
+    "rules": [
+      "H4-05",
+      "H7-05a",
+      "H5-02b"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "ANY"
+    },
+    "timeline": [
+      {
+        "days": "1",
+        "blood": true
+      }
+    ],
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "womanType",
+            "dont_remember"
+          ],
+          [
+            "nasiyaForgot",
+            "both"
+          ],
+          [
+            "nasiyaCountMin",
+            "dont_remember"
+          ],
+          [
+            "nasiyaCountMax",
+            "dont_remember"
+          ],
+          [
+            "nasiyaHalfMonth",
+            "dont_remember"
+          ]
+        ],
+        "then": "bloodProps",
+        "state": "JAM3_M"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-018",
+    "group": "unknown",
+    "title": "صفات الدم «لا أفهم» → اللون فالحرارة فالدفع؛ الدفع وحده يكفي → حيض",
+    "source": "H0-05؛ H5-02a؛ SPEC §٦ (صفات الدم / لا أفهم)",
+    "rules": [
+      "H0-05",
+      "H5-02a"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUD",
+      "lastBloodEnd": -20
+    },
+    "timeline": [
+      {
+        "days": "1",
+        "blood": true,
+        "props": null
+      }
+    ],
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "bloodProps",
+            "dont_understand"
+          ],
+          [
+            "propsDark",
+            "light"
+          ],
+          [
+            "propsWarm",
+            false
+          ],
+          [
+            "propsThrust",
+            true
+          ]
+        ],
+        "then": null,
+        "state": "HAYD"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-019",
+    "group": "unknown",
+    "title": "صفات الدم «لم أنتبه» → تُعامل فاقدة فيُسأل عن الاستمرار؛ «لا أعلم» → الجمع ولا سؤال بعده",
+    "source": "H5-02b؛ H3-06؛ SPEC §٦ (صفات الدم / لا أتذكر)",
+    "rules": [
+      "H5-02b",
+      "H3-06"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUD",
+      "lastBloodEnd": -20
+    },
+    "timeline": [
+      {
+        "days": "1",
+        "blood": true,
+        "props": null
+      }
+    ],
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "bloodProps",
+            "dont_remember"
+          ],
+          [
+            "willLastThreeDays",
+            "dont_remember"
+          ]
+        ],
+        "then": null,
+        "state": "JAM3_M"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-020",
+    "group": "unknown",
+    "title": "اختبار القطنة «لا أفهم» → شرح الفعل والسؤال نفسه؛ «لم أُجرِ» → يبقى معلَّقًا ويُعاد الطلب",
+    "source": "H6-01؛ SPEC §٦ (اختبار القطنة)",
+    "rules": [
+      "H6-01"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-4",
+        "blood": true
+      },
+      {
+        "days": "5",
+        "blood": false,
+        "kursuf": "none"
+      }
+    ],
+    "answers": {
+      "innerContinuity": true
+    },
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "kursufTest",
+            "dont_understand"
+          ],
+          [
+            "kursufTest",
+            "dont_remember"
+          ]
+        ],
+        "then": "kursufTest",
+        "state": "PENDING"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-021",
+    "group": "unknown",
+    "title": "احتمال بقاء الدم داخلًا «لا أدري» → يُعدّ محتملًا → طلب القطنة",
+    "source": "H6-01؛ SPEC §٦ (احتمال بقاء الدم داخلًا / لا أتذكر)",
+    "rules": [
+      "H6-01"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-4",
+        "blood": true
+      },
+      {
+        "days": "5",
+        "blood": false,
+        "kursuf": "none"
+      }
+    ],
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "innerContinuity",
+            "dont_remember"
+          ]
+        ],
+        "then": "kursufTest",
+        "state": "PENDING"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-022",
+    "group": "unknown",
+    "title": "احتمال بقاء الدم داخلًا «لا أفهم» → «هل ترين أثرًا عند الفحص؟» لا → طهر",
+    "source": "H6-01؛ SPEC §٦ (احتمال بقاء الدم داخلًا / لا أفهم)",
+    "rules": [
+      "H6-01"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-4",
+        "blood": true
+      },
+      {
+        "days": "5",
+        "blood": false,
+        "kursuf": "none"
+      }
+    ],
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "innerContinuity",
+            "dont_understand"
+          ],
+          [
+            "innerTrace",
+            false
+          ]
+        ],
+        "then": null,
+        "state": "TAHIR"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-023",
+    "group": "unknown",
+    "title": "«سيستمر ثلاثة أيام؟» لا أفهم → «هل جرت عادتك أن الدم إذا نزل بقي أيامًا؟» نعم → حيض",
+    "source": "H3-06؛ H5-02a؛ SPEC §٦ (سيستمر ثلاثة أيام / لا أفهم)",
+    "rules": [
+      "H3-06",
+      "H5-02a"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUD",
+      "lastBloodEnd": -20
+    },
+    "timeline": [
+      {
+        "days": "1",
+        "blood": true,
+        "props": "faqid"
+      }
+    ],
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "willLastThreeDays",
+            "dont_understand"
+          ],
+          [
+            "bloodUsuallyLasts",
+            true
+          ]
+        ],
+        "then": null,
+        "state": "HAYD"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-024",
+    "group": "unknown",
+    "title": "عدد الأقارب: «لا أفهم» → شرح الشرطين؛ «لا أعرف» → العدد المختار؛ «لا أستطيع الاختيار» → سبعة ثم اختبار الاستحاضة لما بعدها",
+    "source": "H7-07؛ H7-04 (م٢٢٢)؛ SPEC §٦ (عدد الأقارب)",
+    "rules": [
+      "H7-07",
+      "H7-04a",
+      "I2-01"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB"
+    },
+    "timeline": [
+      {
+        "days": "1-11",
+        "blood": true,
+        "props": null
+      }
+    ],
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "kinCount",
+            "dont_understand"
+          ],
+          [
+            "kinCount",
+            "dont_remember"
+          ],
+          [
+            "chosenCount",
+            "dont_remember"
+          ]
+        ],
+        "then": "istihadhaTest",
+        "state": "HAYD",
+        "stateAt": "D7 noon"
+      },
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "kinCount",
+            "dont_remember"
+          ],
+          [
+            "chosenCount",
+            "dont_remember"
+          ]
+        ],
+        "then": "istihadhaTest",
+        "state": "IST",
+        "stateAt": "D8 noon"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-025",
+    "group": "unknown",
+    "title": "عدد قريبة ستة ثم الشرطان «لا أعلم بالاختلاف» → الشرط متحقق → حيض ستة",
+    "source": "H7-07 (م٢٢٢: عدم العلم بالمخالفة)",
+    "rules": [
+      "H7-07"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB"
+    },
+    "timeline": [
+      {
+        "days": "1-11",
+        "blood": true,
+        "props": null
+      }
+    ],
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "kinCount",
+            6
+          ],
+          [
+            "kinConditions",
+            "dont_remember"
+          ]
+        ],
+        "then": "istihadhaTest",
+        "state": "HAYD",
+        "stateAt": "D6 noon"
+      },
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "kinCount",
+            6
+          ],
+          [
+            "kinConditions",
+            "dont_remember"
+          ]
+        ],
+        "then": "istihadhaTest",
+        "state": "IST",
+        "stateAt": "D7 noon"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-026",
+    "group": "unknown",
+    "title": "عدد قريبة مع العلم بمخالفتها → لا رجوع إليها → العدد المختار أربعة",
+    "source": "H7-07؛ H7-04a",
+    "rules": [
+      "H7-07",
+      "H7-04a"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB"
+    },
+    "timeline": [
+      {
+        "days": "1-11",
+        "blood": true,
+        "props": null
+      }
+    ],
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "kinCount",
+            6
+          ],
+          [
+            "kinConditions",
+            true
+          ],
+          [
+            "chosenCount",
+            4
+          ]
+        ],
+        "then": "istihadhaTest",
+        "state": "HAYD",
+        "stateAt": "D4 noon"
+      },
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "kinCount",
+            6
+          ],
+          [
+            "kinConditions",
+            true
+          ],
+          [
+            "chosenCount",
+            4
+          ]
+        ],
+        "then": "istihadhaTest",
+        "state": "IST",
+        "stateAt": "D5 noon"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-027",
+    "group": "unknown",
+    "title": "تاريخ الميلاد «لا أتذكر» → سن تقريبي ثلاثون → بعيد عن التسع والستين فلا أثر ولا سؤال بعده",
+    "source": "H1-01؛ H1-02؛ SPEC §٦ (تاريخ الميلاد / لا أتذكر)",
+    "rules": [
+      "H1-01a",
+      "H1-02"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 6
+      },
+      "ageHijri": null
+    },
+    "timeline": [
+      {
+        "days": "1-6",
+        "blood": true
+      }
+    ],
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "birthDate",
+            "dont_remember"
+          ],
+          [
+            "approxAge",
+            30
+          ]
+        ],
+        "then": null,
+        "state": "HAYD"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-028",
+    "group": "unknown",
+    "title": "تاريخ الميلاد «لا أفهم» → السن بدل التاريخ؛ تسع سنين تقريبًا = شك في إكمال التسع",
+    "source": "H1-01b (ج م٤٨٧)؛ SPEC §٦ (تاريخ الميلاد / لا أفهم)",
+    "rules": [
+      "H1-01a",
+      "H1-01b"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB",
+      "ageHijri": null
+    },
+    "timeline": [
+      {
+        "days": "1-5",
+        "blood": true,
+        "props": "wajid"
+      }
+    ],
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "birthDate",
+            "dont_understand"
+          ],
+          [
+            "approxAge",
+            9
+          ]
+        ],
+        "then": null,
+        "note": "الحالة الناتجة بحسب H1-01b (الواجد محل إشكال) تُفحص في حالات الأهلية"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-029",
+    "group": "unknown",
+    "title": "آخر انتهاء «لا أتذكر» → «هل مضى أكثر من عشرة أيام؟» لا → «كم يومًا؟» خمسة → ليس بحيض قبل أقل الطهر",
+    "source": "T-04؛ H3-03؛ SPEC §٦ (تاريخ انتهاء آخر حيض / لا أتذكر)",
+    "rules": [
+      "T-04",
+      "H3-03"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUD",
+      "lastBloodEnd": null
+    },
+    "timeline": [
+      {
+        "days": "1-2",
+        "blood": true,
+        "props": "wajid"
+      }
+    ],
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "lastBloodEnd",
+            "dont_remember"
+          ],
+          [
+            "moreThanTenDays",
+            false
+          ],
+          [
+            "daysSinceLastBlood",
+            5
+          ]
+        ],
+        "then": "istihadhaTest",
+        "state": "IST"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-030",
+    "group": "unknown",
+    "title": "آخر انتهاء «لا أفهم» → «متى آخر مرة اغتسلتِ من الحيض؟» قبل عشرين يومًا → الفاصل تام فحيض بالصفات",
+    "source": "T-04؛ H5-02a؛ SPEC §٦ (تاريخ انتهاء آخر حيض / لا أفهم)",
+    "rules": [
+      "T-04",
+      "H5-02a"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUD",
+      "lastBloodEnd": null
+    },
+    "timeline": [
+      {
+        "days": "1-2",
+        "blood": true,
+        "props": "wajid"
+      }
+    ],
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "lastBloodEnd",
+            "dont_understand"
+          ],
+          [
+            "lastGhuslDate",
+            -20
+          ]
+        ],
+        "then": null,
+        "state": "HAYD"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-031",
+    "group": "unknown",
+    "title": "مرحلة السقط «لا أعرف» → معلَّق مع التوجيه إلى من يعرف، ولا يُكرَّر السؤال",
+    "source": "M-01 (ج م٦١٩)؛ SPEC §٦ (مرحلة السقط / لا أتذكر)",
+    "rules": [
+      "M-01"
+    ],
+    "subject": "SIQT",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "at": "D1 10:00",
+        "event": "miscarriage",
+        "stage": "unknown"
+      },
+      {
+        "at": "D1 11:00",
+        "event": "bloodStart"
+      }
+    ],
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "miscarriageStage",
+            "dont_remember"
+          ]
+        ],
+        "then": null,
+        "state": "PENDING",
+        "stateAt": "D1 noon"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-032",
+    "group": "unknown",
+    "title": "مرحلة السقط «لا أفهم» → «هل كان له صورة إنسان؟» نعم → نفاس، ثم ولوج الروح «لا أعلم»",
+    "source": "M-01؛ M-06؛ SPEC §٦ (مرحلة السقط / لا أفهم)",
+    "rules": [
+      "M-01",
+      "M-06"
+    ],
+    "subject": "SIQT",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "at": "D1 10:00",
+        "event": "miscarriage",
+        "stage": "unknown"
+      },
+      {
+        "at": "D1 11:00",
+        "event": "bloodStart"
+      }
+    ],
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "miscarriageStage",
+            "dont_understand"
+          ],
+          [
+            "humanForm",
+            true
+          ],
+          [
+            "ensouled",
+            "dont_remember"
+          ]
+        ],
+        "then": null,
+        "state": "NIFAS",
+        "stateAt": "D1 noon"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-033",
+    "group": "unknown",
+    "title": "ذات الوقت قبل وقتها بخمسة أيام: «هل يصدق التعجيل؟» لا أدري → كغير ذات الوقت فتُسأل عن الصفات",
+    "source": "H5-01؛ H5-03؛ SPEC §٦",
+    "rules": [
+      "H5-01",
+      "H5-03",
+      "H5-02b"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 20,
+        "count": 7
+      },
+      "lastBloodEnd": -10
+    },
+    "timeline": [
+      {
+        "days": "15",
+        "blood": true,
+        "props": null
+      }
+    ],
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "isEarlyHabit",
+            "dont_remember"
+          ]
+        ],
+        "then": "bloodProps",
+        "state": "JAM3_M"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-034",
+    "group": "unknown",
+    "title": "ذات الوقت قبل وقتها بخمسة أيام: «هل يصدق التعجيل؟» نعم → حيض بالرؤية بلا سؤال عن الصفات",
+    "source": "H5-01؛ H5-05",
+    "rules": [
+      "H5-01",
+      "H5-05"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 20,
+        "count": 7
+      },
+      "lastBloodEnd": -10
+    },
+    "timeline": [
+      {
+        "days": "15",
+        "blood": true,
+        "props": null
+      }
+    ],
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "isEarlyHabit",
+            true
+          ]
+        ],
+        "then": null,
+        "state": "HAYD"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-035",
+    "group": "unknown",
+    "title": "اختبار الاستحاضة «لم أختبر بعد» → يُعاد الطلب؛ كثيرة → يُسأل عن نمط البروز؛ «لا أدري» → صبيب",
+    "source": "I2-01؛ I1-04؛ I2-04؛ SPEC §٦",
+    "rules": [
+      "I2-01",
+      "I1-04",
+      "I2-04"
+    ],
+    "subject": "ISTIHADHA",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 5
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-12",
+        "blood": true
+      }
+    ],
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "istihadhaTest",
+            "dont_remember"
+          ],
+          [
+            "istihadhaTest",
+            "kathira"
+          ],
+          [
+            "istihadhaFlow",
+            "dont_remember"
+          ]
+        ],
+        "then": null,
+        "state": "IST_K",
+        "stateAt": "D13 fajr"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-036",
+    "group": "unknown",
+    "title": "القطنة نظيفة: «هل يعود قبل العشرة؟» لا أفهم → «هل كان ينقطع ثم يعود في المرات السابقة؟» نعم → الجمع",
+    "source": "H6-02؛ SPEC §٦",
+    "rules": [
+      "H6-02",
+      "H3-02"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-4",
+        "blood": true
+      },
+      {
+        "days": "5-6",
+        "blood": false,
+        "kursuf": "clean"
+      }
+    ],
+    "answers": {
+      "innerContinuity": true
+    },
+    "expected": [
+      {
+        "assert": "questionPath",
+        "value": [
+          [
+            "willReturnBeforeTen",
+            "dont_understand"
+          ],
+          [
+            "bloodUsuallyReturns",
+            true
+          ]
+        ],
+        "then": null,
+        "state": "JAM3",
+        "stateAt": "D6 noon"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-037",
+    "group": "unknown",
+    "title": "ذات الوقت في وقتها: أول سؤال في الحيضة كلها عند الانقطاع «هل تحتملين بقاءه داخلًا؟»",
+    "source": "H5-05؛ H6-01؛ SPEC §٥.٣ خطوة ٣",
+    "rules": [
+      "H5-05",
+      "H6-01"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-5",
+        "blood": true
+      },
+      {
+        "days": "6",
+        "blood": false,
+        "kursuf": "none"
+      }
+    ],
+    "expected": [
+      {
+        "assert": "nextQuestion",
+        "value": "innerContinuity"
+      }
+    ]
+  },
+  {
+    "id": "G-UNK-038",
+    "group": "unknown",
+    "title": "نقاء ليلًا بلا مدى رمضان مدخل → «هل الغد من رمضان أو قضائه؟»؛ ولا يُسأل بعد الفجر",
+    "source": "H9-15؛ SPEC §٦",
+    "rules": [
+      "H9-15"
+    ],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 1,
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-4",
+        "blood": true
+      },
+      {
+        "at": "D4 22:00",
+        "event": "bloodStop"
+      }
+    ],
+    "answers": {
+      "innerContinuity": false
+    },
+    "expected": [
+      {
+        "assert": "nextQuestion",
+        "value": "ramadanTomorrow",
+        "at": "D4 23:00"
+      },
+      {
+        "assert": "nextQuestion",
+        "value": null,
+        "at": "D5 06:00"
+      }
+    ]
+  }
+]

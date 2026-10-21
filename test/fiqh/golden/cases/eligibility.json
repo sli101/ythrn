@@ -1,0 +1,135 @@
+[
+  {
+    "id": "G-ELG-001",
+    "group": "eligibility",
+    "title": "دون التسع: دم بصفات الحيض ليس حيضًا ولا استحاضة",
+    "source": "H1-01a (ج م٤٨٦)؛ I1-02",
+    "rules": ["H1-01a", "I1-02"],
+    "subject": "HAYD",
+    "profile": {"womanType": "MUB", "ageHijri": 8.5},
+    "timeline": [{"days": "1-5", "blood": true, "props": "wajid"}, {"days": "6-15", "blood": false}],
+    "expected": [{"days": "1-5", "state": "GHAYR"}]
+  },
+  {
+    "id": "G-ELG-002",
+    "group": "eligibility",
+    "title": "الشاكة في إكمال التسع: الواجد محل إشكال والفاقد ليس بحيض",
+    "source": "H1-01b (ج م٤٨٧)",
+    "rules": ["H1-01b"],
+    "subject": "HAYD",
+    "profile": {"womanType": "MUB", "ageDoubt": "nine"},
+    "timeline": [{"days": "1-5", "blood": true, "props": "wajid"}, {"days": "6-15", "blood": false}],
+    "expected": [{"days": "1-5", "state": "HAYD", "classification": "ishkal"}]
+  },
+  {
+    "id": "G-ELG-003",
+    "group": "eligibility",
+    "title": "بعد الستين: وظائف المستحاضة على الأحوط وجوبًا ولو في وقت العادة",
+    "source": "H1-02؛ H1-06 (م٢٣٦)",
+    "rules": ["H1-02", "H1-06"],
+    "subject": "HAYD",
+    "profile": {"womanType": "VW", "habit": {"anchor": "start", "start": 1, "count": 6}, "ageHijri": 60.5},
+    "timeline": [{"days": "1-6", "blood": true}, {"days": "7-16", "blood": false}],
+    "expected": [{"days": "1-6", "state": "IST", "classification": "ihtiyat_wujubi"}]
+  },
+  {
+    "id": "G-ELG-004",
+    "group": "eligibility",
+    "title": "الشاكة في إكمال الستين تبني على عدمه فتحيض",
+    "source": "H1-02 (ج م٤٨٩)",
+    "rules": ["H1-02"],
+    "subject": "HAYD",
+    "profile": {"womanType": "VW", "habit": {"anchor": "start", "start": 1, "count": 6}, "ageDoubt": "sixty"},
+    "timeline": [{"days": "1-6", "blood": true}, {"days": "7-16", "blood": false}],
+    "expected": [{"days": "1-6", "state": "HAYD"}]
+  },
+  {
+    "id": "G-ELG-005",
+    "group": "eligibility",
+    "title": "استئصال الرحم كاملًا: الدم استحاضة لا حيض",
+    "source": "H1-05 (س ٤٩١٧؛ ج م٤٩١)",
+    "rules": ["H1-05"],
+    "subject": "HAYD",
+    "profile": {"womanType": "VW", "habit": {"anchor": "start", "start": 1, "count": 6}, "hysterectomy": true},
+    "timeline": [{"days": "1-6", "blood": true, "props": "wajid"}, {"days": "7-16", "blood": false}],
+    "expected": [{"days": "1-6", "state": "IST"}]
+  },
+  {
+    "id": "G-ELG-006",
+    "group": "eligibility",
+    "title": "دم مُحرز أنه من جرح: لا حيض ولا استحاضة",
+    "source": "H2-02 (س ٣٤٧٧)",
+    "rules": ["H2-02"],
+    "subject": "HAYD",
+    "profile": {"womanType": "MUD"},
+    "timeline": [{"days": "1-4", "blood": true, "props": "wajid"}, {"at": "D1 fajr", "event": "sourceNote", "source": "wound"}, {"days": "5-14", "blood": false}],
+    "expected": [{"days": "1-4", "state": "GHAYR"}]
+  },
+  {
+    "id": "G-ELG-007",
+    "group": "eligibility",
+    "title": "تردد بين البكارة والحيض: القطنة مطوّقة → بكارة",
+    "source": "H2-01 (م٢١٢)",
+    "rules": ["H2-01"],
+    "subject": "HAYD",
+    "profile": {"womanType": "MUB"},
+    "timeline": [{"days": "1-3", "blood": true, "props": "wajid"}, {"at": "D1 fajr", "event": "sourceNote", "source": "doubtVirginityOrHayd"}, {"at": "D1 06:00", "event": "virginityTest", "result": "ringed"}, {"days": "4-14", "blood": false}],
+    "expected": [{"days": "1-3", "state": "GHAYR"}]
+  },
+  {
+    "id": "G-ELG-008",
+    "group": "eligibility",
+    "title": "تردد بين البكارة والحيض: القطنة مستنقعة → حيض بقواعده",
+    "source": "H2-01 (م٢١٢)",
+    "rules": ["H2-01", "H5-02a"],
+    "subject": "HAYD",
+    "profile": {"womanType": "MUB"},
+    "timeline": [{"days": "1-4", "blood": true, "props": "wajid"}, {"at": "D1 fajr", "event": "sourceNote", "source": "doubtVirginityOrHayd"}, {"at": "D1 06:00", "event": "virginityTest", "result": "soaked"}, {"days": "5-14", "blood": false}],
+    "expected": [{"days": "1-4", "state": "HAYD"}]
+  },
+  {
+    "id": "G-ELG-009",
+    "group": "eligibility",
+    "title": "تردد بين البكارة والحيض بلا اختبار ولا حالة سابقة → طهارة وطلب الاختبار",
+    "source": "H2-01 (م٢١٣)",
+    "rules": ["H2-01"],
+    "subject": "HAYD",
+    "profile": {"womanType": "MUB"},
+    "timeline": [{"days": "1-4", "blood": true, "props": "wajid"}, {"at": "D1 fajr", "event": "sourceNote", "source": "doubtVirginityOrHayd"}, {"days": "5-14", "blood": false}],
+    "expected": [{"days": "1-4", "state": "TAHIR"}, {"assert": "pendingInput", "value": "virginityTest"}]
+  },
+  {
+    "id": "G-ELG-010",
+    "group": "eligibility",
+    "title": "مردد بين الجرح والحيض والاحتمالان معقولان بلا حيض سابق → حكم غير الحائض",
+    "source": "H2-02 (ج م٥٠٧)",
+    "rules": ["H2-02"],
+    "subject": "HAYD",
+    "profile": {"womanType": "MUD"},
+    "timeline": [{"days": "1-5", "blood": true}, {"at": "D1 fajr", "event": "sourceNote", "source": "doubtWoundOrHayd"}, {"days": "6-15", "blood": false}],
+    "expected": [{"days": "1-5", "state": "GHAYR"}]
+  },
+  {
+    "id": "G-ELG-011",
+    "group": "eligibility",
+    "title": "الحامل ذات الوقت ترى بعد عشرين يومًا من أول عادتها دمًا بصفات الحيض → الجمع",
+    "source": "H1-03b (م٢١٤)",
+    "rules": ["H1-03b"],
+    "subject": "HAYD",
+    "profile": {"womanType": "VW", "habit": {"anchor": "start", "start": -24, "count": 6}, "pregnant": true},
+    "timeline": [{"days": "1-4", "blood": true, "props": "wajid"}, {"days": "5-14", "blood": false}],
+    "expected": [{"days": "1-4", "state": "JAM3", "classification": "ihtiyat_wujubi"}],
+    "notes": "أول آخر عادة قبل اليوم ١ بأربعة وعشرين يومًا، والدم بعد عشرين فأكثر."
+  },
+  {
+    "id": "G-ELG-012",
+    "group": "eligibility",
+    "title": "الحامل في وقت عادتها: حكمها حكم غير الحامل",
+    "source": "H1-03a (م٢١٤؛ س ٩٢٥٧)",
+    "rules": ["H1-03a"],
+    "subject": "HAYD",
+    "profile": {"womanType": "VW", "habit": {"anchor": "start", "start": 1, "count": 6}, "pregnant": true},
+    "timeline": [{"days": "1-6", "blood": true, "props": "wajid"}, {"days": "7-16", "blood": false}],
+    "expected": [{"days": "1-6", "state": "HAYD"}]
+  }
+]

@@ -1,0 +1,325 @@
+[
+  {
+    "id": "G-HAB-001",
+    "group": "habit",
+    "title": "تثبت العادة الوقتية والعددية بحيضتين متواليتين متوافقتين",
+    "source": "H4-01؛ SPEC §٤ خطوة ٤",
+    "rules": ["H4-01"],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB",
+      "history": [
+        {"start": -59, "bloodDays": 7},
+        {"start": -29, "bloodDays": 7}
+      ]
+    },
+    "timeline": [{"days": "1-7", "blood": true}],
+    "expected": [
+      {"assert": "habitType", "value": "VW"},
+      {"assert": "habitCount", "value": 7},
+      {"days": "1-7", "state": "HAYD"}
+    ],
+    "notes": "الفاصل بين البدءين ٣٠ يومًا والعدد ٧ في المرتين → VW (الحيضة الجارية تبدأ في وقتها فتتحيض بالرؤية)."
+  },
+  {
+    "id": "G-HAB-002",
+    "group": "habit",
+    "title": "تثبت العادة الوقتية فقط باتفاق الوقت دون العدد",
+    "source": "H4-01 (سبعة في أول الأول وخمسة في أول الثاني → وقتية)",
+    "rules": ["H4-01"],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB",
+      "history": [
+        {"start": -59, "bloodDays": 7},
+        {"start": -29, "bloodDays": 5}
+      ]
+    },
+    "timeline": [{"days": "1-3", "blood": true}],
+    "expected": [{"assert": "habitType", "value": "V"}]
+  },
+  {
+    "id": "G-HAB-003",
+    "group": "habit",
+    "title": "تثبت العادة العددية فقط باتفاق العدد دون الوقت",
+    "source": "H4-01 (خمسة في أول الأول وخمسة في آخر الثاني → عددية)",
+    "rules": ["H4-01"],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB",
+      "history": [
+        {"start": -59, "bloodDays": 5},
+        {"start": -15, "bloodDays": 5}
+      ]
+    },
+    "timeline": [{"days": "1-3", "blood": true}],
+    "expected": [{"assert": "habitType", "value": "W"}, {"assert": "habitCount", "value": 5}]
+  },
+  {
+    "id": "G-HAB-004",
+    "group": "habit",
+    "title": "حيضتان مختلفتان وقتًا وعددًا → مضطربة",
+    "source": "H4-01؛ H4-05 (س ٣٤٨٧)",
+    "rules": ["H4-01", "H4-05"],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB",
+      "history": [
+        {"start": -59, "bloodDays": 7},
+        {"start": -15, "bloodDays": 4}
+      ]
+    },
+    "timeline": [{"days": "1-3", "blood": true}],
+    "expected": [{"assert": "habitType", "value": "MUD"}]
+  },
+  {
+    "id": "G-HAB-005",
+    "group": "habit",
+    "title": "تصحيح المالك: حيضة واحدة مخالفة بعد عادة ثابتة لا تزيلها",
+    "source": "H4-04 (ج م٥٥٠)؛ SPEC §٤ خطوة ٥",
+    "rules": ["H4-04"],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB",
+      "history": [
+        {"start": -89, "bloodDays": 7},
+        {"start": -59, "bloodDays": 7},
+        {"start": -29, "bloodDays": 4}
+      ]
+    },
+    "timeline": [{"days": "1-3", "blood": true}],
+    "expected": [
+      {"assert": "habitType", "value": "VW", "note": "ليست مقارنة لآخر حيضتين؛ العادة ٧ باقية"},
+      {"assert": "habitCount", "value": 7}
+    ],
+    "notes": "لو قورنت آخر حيضتان فقط (٧ ثم ٤) لظهرت وقتية فقط، وهو الخطأ الذي صحّحه المالك."
+  },
+  {
+    "id": "G-HAB-006",
+    "group": "habit",
+    "title": "تغيّر العدد مرة ثم عودته → العددية باقية",
+    "source": "H4-04 (ج م٥٥١ ذيل)",
+    "rules": ["H4-04"],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB",
+      "history": [
+        {"start": -119, "bloodDays": 6},
+        {"start": -89, "bloodDays": 6},
+        {"start": -59, "bloodDays": 9},
+        {"start": -29, "bloodDays": 6}
+      ]
+    },
+    "timeline": [{"days": "1-3", "blood": true}],
+    "expected": [{"assert": "habitType", "value": "VW"}, {"assert": "habitCount", "value": 6}]
+  },
+  {
+    "id": "G-HAB-007",
+    "group": "habit",
+    "title": "تتبدل العادة بحيضتين متواليتين مخالفتين للقديمة ومتماثلتين",
+    "source": "H4-04 (ج م٥٤٩: من ١–٥ إلى ١٠–١٧ شهرين → عادتها سبعة من العاشر)",
+    "rules": ["H4-04"],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB",
+      "history": [
+        {"start": -119, "bloodDays": 5},
+        {"start": -89, "bloodDays": 5},
+        {"start": -50, "bloodDays": 7},
+        {"start": -20, "bloodDays": 7}
+      ]
+    },
+    "timeline": [{"days": "10-16", "blood": true}],
+    "expected": [
+      {"assert": "habitType", "value": "VW"},
+      {"assert": "habitCount", "value": 7},
+      {"assert": "habitStart", "value": 10},
+      {"days": "10-16", "state": "HAYD"}
+    ],
+    "notes": "الحيضتان الأخيرتان بدأتا في اليوم العاشر من دورتيهما (−٥٠ و−٢٠ بالنسبة إلى اليوم ١٠ الحالي) بسبعة أيام."
+  },
+  {
+    "id": "G-HAB-008",
+    "group": "habit",
+    "title": "تزول العادة بحيضتين مخالفتين للقديمة ومختلفتين فيما بينهما → مضطربة",
+    "source": "H4-04 (ج م٥٥١)",
+    "rules": ["H4-04", "H4-05"],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB",
+      "history": [
+        {"start": -119, "bloodDays": 5},
+        {"start": -89, "bloodDays": 5},
+        {"start": -50, "bloodDays": 8},
+        {"start": -25, "bloodDays": 4}
+      ]
+    },
+    "timeline": [{"days": "1-3", "blood": true}],
+    "expected": [{"assert": "habitType", "value": "MUD"}]
+  },
+  {
+    "id": "G-HAB-009",
+    "group": "habit",
+    "title": "اختلفت الحيضتان المخالفتان وقتًا فقط واتفقتا عددًا → تبقى عددية غير وقتية",
+    "source": "H4-04 (ج م٥٥١: وإن اختلفتا في الوقت فقط دون العدد → عددية)",
+    "rules": ["H4-04"],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB",
+      "history": [
+        {"start": -119, "bloodDays": 5},
+        {"start": -89, "bloodDays": 5},
+        {"start": -50, "bloodDays": 5},
+        {"start": -12, "bloodDays": 5}
+      ]
+    },
+    "timeline": [{"days": "1-3", "blood": true}],
+    "expected": [{"assert": "habitType", "value": "W"}, {"assert": "habitCount", "value": 5}]
+  },
+  {
+    "id": "G-HAB-010",
+    "group": "habit",
+    "title": "لا تثبت العادة بالتمييز (مستمرة الدم تختلف صفاته)",
+    "source": "H4-02 (م٢١٨)",
+    "rules": ["H4-02"],
+    "subject": "HAYD",
+    "profile": {"womanType": "MUB", "history": []},
+    "timeline": [
+      {"days": "1-5", "blood": true, "props": "wajid"},
+      {"days": "6-30", "blood": true, "props": "faqid"},
+      {"days": "31-35", "blood": true, "props": "wajid"},
+      {"days": "36-60", "blood": true, "props": "faqid"}
+    ],
+    "expected": [
+      {"assert": "habitType", "value": "MUB", "note": "لا عادة؛ تبقى على الصفات مطلقًا"},
+      {"days": "1-5", "state": "HAYD"},
+      {"days": "6-30", "state": "IST"},
+      {"days": "31-35", "state": "HAYD"},
+      {"days": "36-60", "state": "IST"}
+    ],
+    "notes": "الدم لم ينقطع فلا حيضة «مكتملة» تدخل التاريخ؛ الحكم بالصفات في كل شهر (H4-02)."
+  },
+  {
+    "id": "G-HAB-011",
+    "group": "habit",
+    "title": "النمط المتناوب ٣،٤،٣،٤ → مضطربة لا عادة مركبة",
+    "source": "H4-03 (م٢٢٦)",
+    "rules": ["H4-03"],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB",
+      "history": [
+        {"start": -119, "bloodDays": 3},
+        {"start": -89, "bloodDays": 4},
+        {"start": -59, "bloodDays": 3},
+        {"start": -29, "bloodDays": 4}
+      ]
+    },
+    "timeline": [{"days": "1-3", "blood": true}],
+    "expected": [{"assert": "habitType", "value": "V", "note": "الوقت متفق (كل ٣٠ يومًا) والعدد مختلف؛ لا عادة مركبة"}],
+    "notes": "لو أراد المالك اعتبارها مضطربة محضة فليُراجع: النص يحكم بالمضطربة من جهة العدد، ويبقى اتفاق الوقت موجبًا للوقتية بحسب H4-01."
+  },
+  {
+    "id": "G-HAB-012",
+    "group": "habit",
+    "title": "تصريح ابتدائي بالعادة عند أول استخدام ثم حيضة مخالفة واحدة",
+    "source": "SPEC §٤ الحالة الابتدائية؛ H4-04",
+    "rules": ["H4-04"],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "VW",
+      "declared": {"womanType": "VW", "count": 6, "start": 1},
+      "habit": {"anchor": "start", "start": 1, "count": 6},
+      "history": [{"start": -29, "bloodDays": 9}]
+    },
+    "timeline": [{"days": "1-6", "blood": true}],
+    "expected": [{"assert": "habitType", "value": "VW"}, {"assert": "habitCount", "value": 6}],
+    "notes": "الحالة المصرَّح بها تُعامل كعادة ثابتة؛ حيضة واحدة بتسعة أيام لا تزيلها."
+  },
+  {
+    "id": "G-HAB-013",
+    "group": "habit",
+    "title": "التسامح العرفي: فرق ربع يوم في العدد لا يمنع التساوي",
+    "source": "ج م٥٣٩ (H4-01)",
+    "rules": ["H4-01"],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB",
+      "history": [
+        {"start": -59, "bloodDays": 7},
+        {"start": -29, "bloodDays": 7.2}
+      ]
+    },
+    "timeline": [{"days": "1-3", "blood": true}],
+    "expected": [{"assert": "habitType", "value": "VW"}, {"assert": "habitCount", "value": 7}]
+  },
+  {
+    "id": "G-HAB-014",
+    "group": "habit",
+    "title": "فرق نصف يوم في العدد يمنع التساوي",
+    "source": "ج م٥٣٩ (لا يزيد أحدهما بنصف يوم أو ثلثه)",
+    "rules": ["H4-01"],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB",
+      "history": [
+        {"start": -59, "bloodDays": 7},
+        {"start": -29, "bloodDays": 7.5}
+      ]
+    },
+    "timeline": [{"days": "1-3", "blood": true}],
+    "expected": [{"assert": "habitType", "value": "V"}]
+  },
+  {
+    "id": "G-HAB-015",
+    "group": "habit",
+    "title": "الفاصل ٢٨ و٣١ يومًا يُعدّ وقتًا واحدًا",
+    "source": "H0-04؛ H4-07 (ج م٥٤٥–٥٤٦)",
+    "rules": ["H0-04", "H4-07"],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB",
+      "history": [
+        {"start": -59, "bloodDays": 6},
+        {"start": -31, "bloodDays": 6}
+      ]
+    },
+    "timeline": [{"days": "1-3", "blood": true}],
+    "expected": [{"assert": "habitType", "value": "VW", "note": "الفاصل ٢٨ ثم ٣١"}]
+  },
+  {
+    "id": "G-HAB-016",
+    "group": "habit",
+    "title": "الفاصل ٢٤ يومًا لا يُعدّ وقتًا واحدًا",
+    "source": "H0-04 (٢٨–٣١)",
+    "rules": ["H0-04"],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB",
+      "history": [
+        {"start": -54, "bloodDays": 6},
+        {"start": -30, "bloodDays": 6}
+      ]
+    },
+    "timeline": [{"days": "1-3", "blood": true}],
+    "expected": [{"assert": "habitType", "value": "W"}]
+  },
+  {
+    "id": "G-HAB-017",
+    "group": "habit",
+    "title": "ذات العادة الوقتية بآخرها: اتفاق الانتهاء مع اختلاف البدء",
+    "source": "H4-09 (ج م٥٤٤، ٥٦٧–٥٦٨)",
+    "rules": ["H4-09"],
+    "subject": "HAYD",
+    "profile": {
+      "womanType": "MUB",
+      "history": [
+        {"start": -62, "bloodDays": 9, "end": -54},
+        {"start": -29, "bloodDays": 6, "end": -24}
+      ]
+    },
+    "timeline": [{"days": "1-3", "blood": true}],
+    "expected": [{"assert": "habitType", "value": "V", "note": "anchor = end"}],
+    "notes": "الانتهاء في اليوم السابع من الدورة في المرتين (−٥٤ و−٢٤ بفاصل ٣٠) مع اختلاف البدء."
+  }
+]

@@ -1,0 +1,304 @@
+[
+  {
+    "id": "G-NIF-001",
+    "group": "nifas",
+    "title": "سقط في مرحلة المضغة ثم دم واجد أربعة أيام → لا نفاس؛ حيض بشروطه",
+    "source": "M-01 (س ٤٩٢٣، س ٣٦٧٥)؛ M-04",
+    "rules": [
+      "M-01",
+      "M-04"
+    ],
+    "subject": "SIQT",
+    "profile": {
+      "womanType": "MUD"
+    },
+    "timeline": [
+      {
+        "at": "D1 fajr",
+        "event": "miscarriage",
+        "stage": "mudgha"
+      },
+      {
+        "days": "1-4",
+        "blood": true,
+        "props": "wajid"
+      },
+      {
+        "days": "5-14",
+        "blood": false
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-4",
+        "state": "HAYD"
+      },
+      {
+        "days": "6-14",
+        "state": "TAHIR"
+      }
+    ]
+  },
+  {
+    "id": "G-NIF-002",
+    "group": "nifas",
+    "title": "سقط متخلق (تجاوز المضغة) ثم دم خمسة أيام → نفاس",
+    "source": "M-01 (س ٣٤٧٧/٦٩٢١)؛ N2-01",
+    "rules": [
+      "M-01",
+      "N2-01"
+    ],
+    "subject": "SIQT",
+    "profile": {
+      "womanType": "MUD"
+    },
+    "timeline": [
+      {
+        "at": "D1 fajr",
+        "event": "miscarriage",
+        "stage": "formed"
+      },
+      {
+        "days": "1-5",
+        "blood": true
+      },
+      {
+        "days": "6-14",
+        "blood": false
+      }
+    ],
+    "expected": [
+      {
+        "days": "1-5",
+        "state": "NIFAS"
+      },
+      {
+        "days": "6-14",
+        "state": "TAHIR"
+      }
+    ]
+  },
+  {
+    "id": "G-NIF-003",
+    "group": "nifas",
+    "title": "سقط بعد ولوج الروح → نفاس وتنبيه غسل مس الميت",
+    "source": "M-06 (س ٦٩٢٣)",
+    "rules": [
+      "M-06",
+      "M-01"
+    ],
+    "subject": "SIQT",
+    "profile": {
+      "womanType": "MUD"
+    },
+    "timeline": [
+      {
+        "at": "D1 fajr",
+        "event": "miscarriage",
+        "stage": "formed",
+        "ensouled": true
+      },
+      {
+        "days": "1-6",
+        "blood": true
+      },
+      {
+        "days": "7-20",
+        "blood": false
+      }
+    ],
+    "expected": [
+      {
+        "assert": "alertGhuslMayyit",
+        "value": true
+      },
+      {
+        "days": "1-6",
+        "state": "NIFAS"
+      }
+    ]
+  },
+  {
+    "id": "G-NIF-004",
+    "group": "nifas",
+    "title": "مرحلة الجنين مجهولة → ينتظر المدخل ولا يُحكم",
+    "source": "M-01 (الشك → لا نفاس)؛ SPEC §٦",
+    "rules": [
+      "M-01"
+    ],
+    "subject": "SIQT",
+    "profile": {
+      "womanType": "MUD"
+    },
+    "timeline": [
+      {
+        "at": "D1 fajr",
+        "event": "miscarriage",
+        "stage": "unknown"
+      },
+      {
+        "days": "1-5",
+        "blood": true
+      }
+    ],
+    "expected": [
+      {
+        "assert": "pendingInput",
+        "value": "miscarriageStage"
+      },
+      {
+        "days": "1-5",
+        "state": "PENDING"
+      }
+    ]
+  },
+  {
+    "id": "G-NIF-005",
+    "group": "nifas",
+    "title": "دم بدأ بعد الولادة بأحد عشر يومًا → ليس نفاسًا؛ حيض بشروطه",
+    "source": "N1-01 (رأته بعد عشرة أيام منها)",
+    "rules": [
+      "N1-01"
+    ],
+    "subject": "NIFAS",
+    "profile": {
+      "womanType": "MUD"
+    },
+    "timeline": [
+      {
+        "at": "D1 fajr",
+        "event": "birth"
+      },
+      {
+        "days": "1-11",
+        "blood": false
+      },
+      {
+        "days": "12-15",
+        "blood": true,
+        "props": "wajid"
+      },
+      {
+        "days": "16-25",
+        "blood": false
+      }
+    ],
+    "expected": [
+      {
+        "days": "2-11",
+        "state": "TAHIR"
+      },
+      {
+        "days": "12-15",
+        "state": "HAYD"
+      }
+    ]
+  },
+  {
+    "id": "G-NIF-006",
+    "group": "nifas",
+    "title": "ولادة ودم ليلًا: الدم الليلي نفاس والعدّ من فجر التالي (عددية ٧ وتجاوز)",
+    "source": "N1-03 (مبدأ الحساب)؛ T-05؛ N2-01",
+    "rules": [
+      "N1-03",
+      "T-05",
+      "N2-01"
+    ],
+    "subject": "NIFAS",
+    "profile": {
+      "womanType": "W",
+      "habit": {
+        "count": 7
+      }
+    },
+    "timeline": [
+      {
+        "at": "D1 22:00",
+        "event": "birth"
+      },
+      {
+        "at": "D1 22:00",
+        "event": "bloodStart"
+      },
+      {
+        "days": "2-14",
+        "blood": true
+      }
+    ],
+    "expected": [
+      {
+        "days": "2-8",
+        "state": "NIFAS"
+      },
+      {
+        "days": "9-14",
+        "state": "IST"
+      }
+    ],
+    "notes": "العدّ من فجر اليوم ٢ فتنتهي السبعة بفجر اليوم ٩؛ ليلة اليوم ١ نفاس خارج العدّ."
+  },
+  {
+    "id": "G-NIF-007",
+    "group": "nifas",
+    "title": "بعد النفاس: عشرة الاستحاضة ثم ذات الوقت تنتظر عادتها ولو بعد شهر",
+    "source": "N2-04 (م٢٥٧)",
+    "rules": [
+      "N2-04"
+    ],
+    "subject": "NIFAS",
+    "profile": {
+      "womanType": "VW",
+      "habit": {
+        "anchor": "start",
+        "start": 20,
+        "count": 6
+      }
+    },
+    "timeline": [
+      {
+        "days": "1-9",
+        "blood": false
+      },
+      {
+        "at": "D10 fajr",
+        "event": "birth"
+      },
+      {
+        "days": "10-15",
+        "blood": true
+      },
+      {
+        "days": "16-19",
+        "blood": false
+      },
+      {
+        "days": "20-25",
+        "blood": true,
+        "props": "wajid"
+      },
+      {
+        "days": "26-49",
+        "blood": false
+      },
+      {
+        "days": "50-55",
+        "blood": true
+      }
+    ],
+    "expected": [
+      {
+        "days": "10-15",
+        "state": "NIFAS"
+      },
+      {
+        "days": "20-25",
+        "state": "IST",
+        "note": "في عشرة الاستحاضة ولو بصفات الحيض وفي أيام العادة"
+      },
+      {
+        "days": "50-55",
+        "state": "HAYD"
+      }
+    ]
+  }
+]

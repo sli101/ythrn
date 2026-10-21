@@ -1,0 +1,155 @@
+[
+  {
+    "id": "G-TIME-001",
+    "group": "time",
+    "title": "الثلاثة بالتلفيق: بدء ظهر الأول وانقطاع ظهر الرابع = ثلاثة أيام",
+    "source": "T-02؛ ج م٤٩٥",
+    "rules": ["T-02", "H3-01"],
+    "subject": "HAYD",
+    "profile": {"womanType": "ANY"},
+    "timeline": [
+      {"at": "D1 noon", "event": "bloodStart", "props": "wajid"},
+      {"at": "D4 noon", "event": "bloodStop"}
+    ],
+    "expected": [
+      {"assert": "threeDaysCompleteAt", "at": "D4 noon"},
+      {"days": "1-4", "state": "HAYD"}
+    ]
+  },
+  {
+    "id": "G-TIME-002",
+    "group": "time",
+    "title": "الثلاثة بالتلفيق: الانقطاع قبل ظهر الرابع بساعة = لم تتم الثلاثة",
+    "source": "T-02؛ ج م٤٩٥",
+    "rules": ["T-02", "H3-01"],
+    "subject": "HAYD",
+    "profile": {"womanType": "ANY"},
+    "timeline": [
+      {"at": "D1 12:00", "event": "bloodStart", "props": "wajid"},
+      {"at": "D4 11:00", "event": "bloodStop"}
+    ],
+    "expected": [{"days": "1-4", "state": "NOT_HAYD"}],
+    "notes": "مطابقة للحالة ٥ من النصوص لكن بأوقات مكتوبة بالساعة."
+  },
+  {
+    "id": "G-TIME-003",
+    "group": "time",
+    "title": "العشرة ٢٤٠ ساعة إذا بدأ الدم نهارًا: بدء ظهر الأول ينتهي ظهر الحادي عشر",
+    "source": "T-03؛ ج م٤٩٨",
+    "rules": ["T-03"],
+    "subject": "HAYD",
+    "profile": {"womanType": "ANY"},
+    "timeline": [{"at": "D1 noon", "event": "bloodStart", "props": "wajid"}, {"days": "2-12", "blood": true}],
+    "expected": [{"assert": "tenDaysEndAt", "at": "D11 noon"}, {"assert": "overflow"}]
+  },
+  {
+    "id": "G-TIME-004",
+    "group": "time",
+    "title": "بدء الدم عند الفجر: العشرة تنتهي بانتهاء ليلة الحادي عشر (قبل فجر ١١)",
+    "source": "T-03؛ ج م٤٩٨ هـ٣",
+    "rules": ["T-03"],
+    "subject": "HAYD",
+    "profile": {"womanType": "ANY"},
+    "timeline": [{"at": "D1 fajr", "event": "bloodStart", "props": "wajid"}, {"days": "1-10", "blood": true}, {"at": "D11 04:00", "event": "bloodStop"}],
+    "expected": [{"assert": "tenDaysEndAt", "at": "D11 fajr"}, {"assert": "noOverflow"}, {"days": "1-10", "state": "HAYD"}]
+  },
+  {
+    "id": "G-TIME-005",
+    "group": "time",
+    "title": "أقل الطهر ٢٤٠ ساعة من لحظة الانقطاع: طهرت الساعة ١٠ ينتهي الساعة ١٠ من الحادي عشر",
+    "source": "T-04؛ ج م٥٠٥",
+    "rules": ["T-04", "H3-03"],
+    "subject": "HAYD",
+    "profile": {"womanType": "ANY"},
+    "timeline": [{"days": "1-5", "blood": true}, {"at": "D6 10:00", "event": "bloodStop"}],
+    "expected": [{"assert": "minTuhrEndsAt", "at": "D16 10:00"}],
+    "notes": "الحادي عشر من الانقطاع = يوم ١٦ في السيناريو."
+  },
+  {
+    "id": "G-TIME-006",
+    "group": "time",
+    "title": "دم يعود قبل تمام أقل الطهر بساعة ليس حيضة جديدة",
+    "source": "T-04؛ H3-03؛ ج م٥٠٤",
+    "rules": ["T-04", "H3-03"],
+    "subject": "HAYD",
+    "profile": {"womanType": "ANY"},
+    "timeline": [
+      {"days": "1-5", "blood": true},
+      {"at": "D6 10:00", "event": "bloodStop"},
+      {"at": "D16 09:00", "event": "bloodStart", "props": "wajid"},
+      {"days": "17-19", "blood": true}
+    ],
+    "expected": [{"days": "16-19", "state": "NOT_HAYD"}]
+  },
+  {
+    "id": "G-TIME-007",
+    "group": "time",
+    "title": "انقطاع نصف ساعة داخل الثلاثة لا يقطع الاستمرار",
+    "source": "H0-09 (انقطاع ≤ ~٣٠ دقيقة لا يقطع)",
+    "rules": ["H0-09", "H3-01"],
+    "subject": "HAYD",
+    "profile": {"womanType": "ANY"},
+    "timeline": [
+      {"at": "D1 fajr", "event": "bloodStart", "props": "wajid"},
+      {"at": "D2 10:00", "event": "fullStop", "minutes": 30},
+      {"days": "2-4", "blood": true}
+    ],
+    "expected": [{"days": "1-4", "state": "HAYD"}]
+  },
+  {
+    "id": "G-TIME-008",
+    "group": "time",
+    "title": "انقطاع خمس ساعات داخل الثلاثة يقطع الاستمرار",
+    "source": "H0-09؛ ج م٥٠٣ هـ١",
+    "rules": ["H0-09", "H3-01"],
+    "subject": "HAYD",
+    "profile": {"womanType": "ANY"},
+    "timeline": [
+      {"days": "1-2", "blood": true},
+      {"at": "D3 08:00", "event": "fullStop", "minutes": 300},
+      {"days": "3-4", "blood": true},
+      {"at": "D5 fajr", "event": "bloodStop"}
+    ],
+    "expected": [{"days": "1-4", "state": "NOT_HAYD"}]
+  },
+  {
+    "id": "G-TIME-009",
+    "group": "time",
+    "title": "الليالي المتوسطة: انقطاع تام في ليلة بين يومي دم داخل الثلاثة يقطع التوالي",
+    "source": "T-03؛ H3-01 (ج م٥٠٠)",
+    "rules": ["T-03", "H3-01"],
+    "subject": "HAYD",
+    "profile": {"womanType": "ANY"},
+    "timeline": [{"days": "1-2", "blood": true, "nights": false}, {"days": "3", "blood": true}, {"days": "4", "blood": false}],
+    "expected": [{"days": "1-3", "state": "NOT_HAYD"}],
+    "notes": "nights:false يعني انقطاعًا تامًا في الليلة بين اليومين."
+  },
+  {
+    "id": "G-TIME-010",
+    "group": "time",
+    "title": "اليوم من الفجر إلى المغرب: الحكم يتغيّر عند المغرب لا عند منتصف الليل",
+    "source": "T-01",
+    "rules": ["T-01"],
+    "subject": "HAYD",
+    "profile": {"womanType": "VW", "habit": {"anchor": "start", "start": 1, "count": 5}},
+    "clock": {"fajr": "05:00", "maghrib": "18:00"},
+    "timeline": [{"days": "1-12", "blood": true}],
+    "expected": [
+      {"assert": "tenDaysEndAt", "at": "D11 fajr"},
+      {"days": "1-5", "state": "HAYD"},
+      {"days": "6-12", "state": "IST"}
+    ]
+  },
+  {
+    "id": "G-TIME-011",
+    "group": "time",
+    "title": "النفاس: العادة العددية ٧ من ظهر الأول تنتهي ظهر الثامن",
+    "source": "T-05؛ ج م٦٢٢",
+    "rules": ["T-05", "N2-01"],
+    "subject": "NIFAS",
+    "profile": {"womanType": "W", "habit": {"count": 7}},
+    "timeline": [{"at": "D1 noon", "event": "birth"}, {"at": "D1 noon", "event": "bloodStart"}, {"days": "2-12", "blood": true}],
+    "expected": [{"assert": "overflow"}, {"days": "1-7", "state": "NIFAS"}, {"days": "9-12", "state": "IST"}],
+    "notes": "اليوم الثامن مختلط (نفاس إلى الظهر ثم استحاضة)؛ لا يُؤكَّد يوميًّا."
+  }
+]
